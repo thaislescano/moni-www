@@ -1,7 +1,8 @@
 var PAGINAS = PAGINAS || [
-    //os htmls que vc vai usar vão ficar aqui
+    //os htmls  vão ficar aqui
     "home",
-    "pesquisar"
+    "pesquisar",
+    "perfil"
 ];
 PAGINAS.loadPages = function () {
 	//carregar todas as paginas de html no PAGINAS msm
