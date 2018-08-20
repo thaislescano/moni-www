@@ -17,13 +17,13 @@
     <img src="img/novaconta.gif" alt="imagem nova conta">
 <div>
      <label for="cname">Nome Completo</label>
-    <input type="text" id="cname" name="firstname">
+    <input class="input-box" type="text" id="cname" name="firstname">
 
      <label for="email"> Email </label>
-    <input type="email" id="email" name="email" placeholder="meunome@email.com">
+    <input class="input-box" type="email" id="email" name="email" placeholder="meunome@email.com">
 
      <label for="curso">Curso</label>
-    <select id="curso" name="curso">
+    <select class="input-box" id="curso" name="curso">
       <option value="eletrotecnica">Eletrotécnica</option>
       <option value="informatica">Informática - integrado</option>
       <option value="mecanica">Mecânica</option>
@@ -31,7 +31,7 @@
     </select>
 
      <label for="semestre">Semestre</label>
-    <select id="semestre" name="semestre">
+    <select class="input-box" id="semestre" name="semestre">
       <option value="1">1° semestre</option>
       <option value="2">2° semestre</option>
       <option value="3">3° semestre</option>
@@ -40,7 +40,8 @@
       <option value="6">6° semestre</option>
       <option value="7">7° semestre</option>
     </select>
-     Sou monitor <input type="checkbox" name="monitor" value="Monitor">
+    <label for="monitor"> Sou monitor </label>
+     <input class="input-check" type="checkbox" name="monitor" value="monitor">
     <div>
 
     <button id="cadastrar"> SALVAR </button>

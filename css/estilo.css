@@ -344,7 +344,7 @@ li:last-child {
    margin-top: 5%;
 }
 
-.nova-conta input, select {
+.nova-conta .input-box{
   width:100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -353,6 +353,10 @@ li:last-child {
   border-radius: 4px;
   box-sizing: border-box;
   font-family: 'roboto', sans-serif;
+}
+
+.nova-conta .input-check{
+  float:right;
 }
 
 .nova-conta button{
