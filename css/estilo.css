@@ -313,3 +313,13 @@ li:last-child {
   }
 
 }
+/*criar nova conta 'form' */
+.nova-conta h2 {
+  margin-top: 20%;
+  text-align: center;
+}
+.nova-conta img {
+  margin-top:22%;
+  text-align:center;
+  width:100%;
+}
