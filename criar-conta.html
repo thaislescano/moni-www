@@ -20,12 +20,13 @@
     <input class="input-box" type="text" id="cname" name="firstname">
 
      <label for="email"> Email </label>
-    <input class="input-box" type="email" id="email" name="email" placeholder="meunome@email.com">
+    <input class="input-box" type="email" id="email" name="email"> <!--placeholder="meunome@email.com"--> 
 
      <label for="curso">Curso</label>
     <select class="input-box" id="curso" name="curso">
       <option value="eletrotecnica">Eletrotécnica</option>
       <option value="informatica">Informática - integrado</option>
+      <option value="informatica">Informática - subsequente</option>
       <option value="mecanica">Mecânica</option>
       <option value="sistemas">Sistemas pra Internet</option>
     </select>
@@ -40,11 +41,12 @@
       <option value="6">6° semestre</option>
       <option value="7">7° semestre</option>
     </select>
-    <label for="monitor"> Sou monitor </label>
-     <input class="input-check" type="checkbox" name="monitor" value="monitor">
-    <div>
-
-    <button id="cadastrar"> SALVAR </button>
+      <label for="monitor"> Sou monitor </label>
+      <input class="input-check" type="checkbox" name="monitor" value="monitor">
+      
+  <div>
+    <button onclick="mostrarSnack()" id="cadastrar"> SALVAR </button>
   </div>
-<div>
 </div>
+</div>
+<div id="snackbar">Sua conta foi criada! </div>
