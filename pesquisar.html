@@ -1,13 +1,15 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="mostrarMenu()">
+    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
+    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
         <ul>
             <li> Registrar monitoria </li>
             <li> Ver registros </li>
             <li> Como avaliar </li> 
+            <li> Sair </li> 
         </ul>    
     </div>
     <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+    <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
     <i id="conta" class="material-icons item"> account_circle </i>
 </div>    
 
@@ -18,7 +20,7 @@
 </div>
   <div class="search-container flexbox-row">
             <input  id="pesquisa" type="text" placeholder="Pesquisar por disciplina" name="search">
-            <button onclick="mostrarCards()" type="submit">  Buscar </button>
+            <button onclick="Pesquisa.cards.mostrarCards()" type="submit">  Buscar </button>
  </div> 
 <div id="snackbar">Sua conta foi criada! </div>
   

@@ -1,5 +1,5 @@
-var Moni = Moni || {};
-Moni.criarConta = {
+var Novo = Novo || {};
+Novo.criarConta = {
 	mostrarSnack: function (){
 		var snack = document.getElementById("snackbar");
 
