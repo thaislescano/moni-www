@@ -19,7 +19,7 @@ Moni.pesquisa = {
 	//foto
 	var infoCard = document.getElementsByClassName("info-card")[0];
 	var imagem = document.createElement("img");
-	imagem.src="img/danpix.png";
+	imagem.src="img/dog.png";
 	imagem.alt="avatar do monitor";
 	infoCard.appendChild(imagem);
 

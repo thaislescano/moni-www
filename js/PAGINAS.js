@@ -6,7 +6,8 @@ var PAGINAS = PAGINAS || [
     "perfil",
     "registrar-monitoria",
     "ver-monitoria",
-    "como-avaliar"
+    "como-avaliar",
+    "avaliacao"
 ];
 PAGINAS.loadPages = function () {
 	//carregar todas as paginas de html no PAGINAS msm
