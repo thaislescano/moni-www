@@ -273,7 +273,7 @@ li:last-child {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-  box-shadow: 0 4px 8px #8b2387;
+  box-shadow: 0 4px 8px grey;
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   animation-duration: 2s;
@@ -325,7 +325,7 @@ li:last-child {
 }
 /*criar nova conta 'form' */
 .nova-conta-ou-reg h2 {
-  margin-top: 20%;
+  margin-top: 22%;
   text-align: center;
   font-family: 'roboto', sans-serif;
 }
@@ -405,7 +405,28 @@ li:last-child {
     bottom: 30px; 
 }
 
+#snackbar-avaliacao {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: #454744; 
+    color: #fff; 
+    text-transform: uppercase;
+    text-align: center; 
+    border-radius: 2px; 
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+
 #snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+#snackbar-avaliacao.show {
     visibility: visible; 
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -441,6 +462,10 @@ li:last-child {
   margin-top: 4%;
   margin-right:2%;
 }
+.pontos-dar{
+  margin-top: 15%;
+  margin-right:2%;
+}
 
 #domi-pontos, #emp-pontos, #pont-pontos{
   background-color:#616161;
@@ -456,6 +481,30 @@ li:last-child {
   z-index:222;
   -webkit-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
+}
+
+/* --- avaliação ---*/
+.ball{
+  background-color:#454744;
+  width:50px;
+  height:50px;
+  color: white;
+  font-size:24px;
+  border-radius:50%;
+  z-index:2;
+  position: relative;
+  margin-left:35%;
+  margin-top:-10%;
+  border: 1px solid white;
+  line-height: 50px;
+}
+
+span {
+  font-style: italic;
+}
+
+.apertado{
+  bottom: -2px;
 }
 
 /* Animations fade  in fade out */

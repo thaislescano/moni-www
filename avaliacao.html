@@ -13,6 +13,18 @@
     <i id="conta" class="material-icons item"> account_circle </i>
 </div>   
 <div class="imagem-centro-img">
+    <h2> Avaliar <span>Fulano de Tal e Tal</span> </h2>
            <img class="imagem-centro-avatar-big" src="img/avaliar-gif.gif" alt="avatar perfil monitor">
-           <div class="ball"></div>
+           <div class="ball"> 12 </div>
    </div>
+
+    <div class="flexbox-row-around pontos-dar">
+    <img onclick="Moni.avaliar.botao1Clicado()" id="btn1-aval" class="avaliado" src="img/botao-dominio.png" alt="dominio de conteudo">
+    <div id="domi-pontos">  </div>
+    <img onclick="Moni.avaliar.botao2Clicado()" id="btn2-aval" class="avaliado" src="img/botao-empatia.png" alt="empatia">
+    <div id="emp-pontos">  </div>
+    <img onclick="Moni.avaliar.botao3Clicado()" id="btn3-aval" class="avaliado" src="img/botao-pontualidade.png" alt="pontualidade">
+     <div id="pont-pontos">  </div>
+     
+   </div>
+   <div id="snackbar-avaliacao"> Obrigado por avaliar! </div>
