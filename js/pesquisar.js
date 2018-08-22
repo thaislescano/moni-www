@@ -1,6 +1,6 @@
-var Pesquisa = Pesquisa || {};
+var Moni = Moni || {};
 
-Pesquisa.cards = {
+Moni.pesquisa = {
 	
 	mostrarCards: function(){
 	//apenas um modelo

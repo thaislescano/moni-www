@@ -3,7 +3,10 @@ var PAGINAS = PAGINAS || [
     "home",
     "pesquisar",
     "criar-conta",
-    "perfil"
+    "perfil",
+    "registrar-monitoria",
+    "ver-monitoria",
+    "como-avaliar"
 ];
 PAGINAS.loadPages = function () {
 	//carregar todas as paginas de html no PAGINAS msm

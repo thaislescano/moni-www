@@ -2,9 +2,9 @@
     <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
     <div id="myMenu" onclick="Moni.index.mostrarMenu()">
         <ul>
-            <li> Registrar monitoria </li>
-            <li> Ver registros </li>
-            <li> Como avaliar </li> 
+            <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
+            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
+            <li onclick="Moni.index.carregarView('como-avaliar');Moni.index.mostrarMenu();"> Como avaliar </li> 
             <li> Sair </li> 
         </ul>    
     </div>
@@ -20,7 +20,7 @@
 </div>
   <div class="search-container flexbox-row">
             <input  id="pesquisa" type="text" placeholder="Pesquisar por disciplina" name="search">
-            <button onclick="Pesquisa.cards.mostrarCards()" type="submit">  Buscar </button>
+            <button onclick="Moni.pesquisa.mostrarCards()" type="submit">  Buscar </button>
  </div> 
 <div id="snackbar">Sua conta foi criada! </div>
   

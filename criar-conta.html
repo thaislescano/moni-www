@@ -2,9 +2,9 @@
     <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
     <div id="myMenu" onclick="Moni.index.mostrarMenu()">
         <ul>
-            <li> Registrar monitoria </li>
-            <li> Ver registros </li>
-            <li> Como avaliar </li> 
+             <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
+            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
+            <li onclick="Moni.index.carregarView('como-avaliar');Moni.index.mostrarMenu();"> Como avaliar </li> 
             <li> Sair </li> 
         </ul>    
     </div>
@@ -14,9 +14,9 @@
 </div>    
 
 <!-- nome completo, semestre, email, curso, username, senha -->
-<div class="nova-conta">
+<div class="nova-conta-ou-reg">
   <h2> </h2>
-    <img src="img/novaconta.gif" alt="imagem nova conta">
+    <img id="novo" src="img/novaconta.gif" alt="imagem nova conta">
 <div>
      <label for="cname">Nome Completo</label>
     <input class="input-box" type="text" id="cname" name="firstname">
@@ -47,7 +47,7 @@
       <input class="input-check" type="checkbox" name="monitor" value="monitor">
       
   <div>
-    <button onclick="Novo.criarConta.mostrarSnack()" id="cadastrar"> SALVAR </button>
+    <button onclick="Moni.criarConta.mostrarSnack()" id="cadastrar"> SALVAR </button>
   </div>
 </div>
 </div>

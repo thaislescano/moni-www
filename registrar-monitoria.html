@@ -11,9 +11,26 @@
     <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
      <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
     <i id="conta" class="material-icons item"> account_circle </i>
-</div>   
+</div> 
 
-<div class="imagem-perfil">
+<div class="nova-conta-ou-reg">
   <h2> </h2>
-    <img id="avatar" src="img/danpix.png" alt="imagem perfil monitor">
-<div> 
+    <img id="registro" src="img/registrar-gif.gif" alt="imagem registro">
+        <div> 
+             <label for="data">Data</label>
+             <input class="input-box" type="date" id="data" name="data">   
+
+               <label for="nome-aluno">Nome do Aluno</label>
+                <input class="input-box" type="text" id="nome-aluno" name="nome-aluno">
+
+                 <label for="conteudo">Conteúdo trabalhado (Palavra-chave - Ex: 'Reino Monera')</label>
+                <input class="input-box" type="text" id="nome-aluno" name="nome-aluno">
+             <div>
+            <button onclick="Moni.registro.mostrarSnack()" id="cadastrar"> Registrar </button>
+            </div>
+       </div>
+</div>
+<div id="snackbar"> Monitoria registrada! </div>
+
+    
+

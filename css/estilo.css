@@ -319,21 +319,27 @@ li:last-child {
 
 }
 /*criar nova conta 'form' */
-.nova-conta h2 {
+.nova-conta-ou-reg h2 {
   margin-top: 20%;
   text-align: center;
   font-family: 'roboto', sans-serif;
 }
-.nova-conta img {
+.nova-conta-ou-reg img {
   margin-top:-30%;
   text-align:center;
-  width:100%;
  z-index: -111;
  position: relative;
  margin-bottom:-25%;
 }
 
-.nova-conta div {
+.nova-conta-ou-reg #novo{
+  width:100%;
+}
+.nova-conta-ou-reg #registro{
+  width:35%;
+}
+
+.nova-conta-ou-reg div {
   display: flex;
   flex-direction:column;
   align-items: left;
@@ -342,14 +348,15 @@ li:last-child {
   font-family: 'roboto', sans-serif;
 }
 
-.nova-conta div div {
+.nova-conta-ou-reg div div {
   display: flex;
   flex-direction:column;
   align-items: center;
   margin-top: 5%;
 }
 
-.nova-conta .input-box{
+
+.nova-conta-ou-reg .input-box{
   width:100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -360,11 +367,8 @@ li:last-child {
   font-family: 'roboto', sans-serif;
 }
 
-.nova-conta .diff{
-  
-}
 
-.nova-conta button{
+.nova-conta-ou-reg button{
    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border: none;
