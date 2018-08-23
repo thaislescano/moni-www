@@ -4,24 +4,26 @@ Moni.avaliar = {
 	emp_pontos: 0,
 	pont_pontos: 0,
 	telaAvaliacao: function() {
+		/*esconder modal*/
 		var modal = document.getElementById("myModal");
 		modal.style.display = "none";
+		/*remover info monitor */
 		var divInfos = document.getElementsByClassName("perfil-infos")[0];
 		while (divInfos.firstChild) {
   			  divInfos.removeChild(divInfos.firstChild);
 		}
-
+		/*transformar imagem em botão */
 		var imgs = document.getElementsByClassName("avaliado");
 		for(var i = 0; i < imgs.length; i++){
 			imgs[i].classList.add("clicavel");
 		}
-
+ 		/*subir div botoes */
 		var divPontos = document.getElementsByClassName("pontos")[0];
-		divPontos.style.marginTop="18%";
-
+		divPontos.style.marginTop="20%";
+		/*esconder botão avaliar monitor*/
 		var avaliar = document.getElementById("avaliar");
 		avaliar.style.display = "none";
-
+		/*zerar pontos*/
 		var box_domi = document.getElementById("domi-pontos");
 		box_domi.innerHTML = "";
 
@@ -30,7 +32,7 @@ Moni.avaliar = {
 
 		var box_pont = document.getElementById("pont-pontos");
 		box_pont.innerHTML = "";
-
+		/*mostrar bolinha de pontos*/
 		var bola = document.createElement("div");
 		var div = document.getElementsByClassName("imagem-centro-img")[0];
 		bola.classList.add("ball");
