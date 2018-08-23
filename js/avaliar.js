@@ -1,8 +1,43 @@
-var Moni = Moni || {};
+ var Moni = Moni || {};
 Moni.avaliar = {
 	domi_pontos: 0,
 	emp_pontos: 0,
 	pont_pontos: 0,
+	telaAvaliacao: function() {
+		var modal = document.getElementById("myModal");
+		modal.style.display = "none";
+		var divInfos = document.getElementsByClassName("perfil-infos")[0];
+		while (divInfos.firstChild) {
+  			  divInfos.removeChild(divInfos.firstChild);
+		}
+
+		var imgs = document.getElementsByClassName("avaliado");
+		for(var i = 0; i < imgs.length; i++){
+			imgs[i].classList.add("clicavel");
+		}
+
+		var divPontos = document.getElementsByClassName("pontos")[0];
+		divPontos.style.marginTop="18%";
+
+		var avaliar = document.getElementById("avaliar");
+		avaliar.style.display = "none";
+
+		var box_domi = document.getElementById("domi-pontos");
+		box_domi.innerHTML = "";
+
+		var box_emp = document.getElementById("emp-pontos");
+		box_emp.innerHTML = "";
+
+		var box_pont = document.getElementById("pont-pontos");
+		box_pont.innerHTML = "";
+
+		var bola = document.createElement("div");
+		var div = document.getElementsByClassName("imagem-centro-img")[0];
+		bola.classList.add("ball");
+		bola.innerHTML = 12;
+		div.appendChild(bola);
+
+	},
 	botao1Clicado: function(){
 
 		// botao1.classList.add("apertado");

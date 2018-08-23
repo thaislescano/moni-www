@@ -23,12 +23,45 @@
    </div>
 
    <div class="flexbox-row pontos">
-      <img class="avaliado" src="img/botao-dominio.png" alt="dominio de conteudo">
+      <img onclick="Moni.avaliar.botao1Clicado()" class="avaliado" src="img/botao-dominio.png" alt="dominio de conteudo">
       <div id="domi-pontos"> 2</div>
-      <img class="avaliado" src="img/botao-empatia.png" alt="empatia">
+      <img onclick="Moni.avaliar.botao2Clicado()"class="avaliado" src="img/botao-empatia.png" alt="empatia">
       <div id="emp-pontos"> 12 </div>
-      <img class="avaliado" src="img/botao-pontualidade.png" alt="pontualidade">
+      <img onclick="Moni.avaliar.botao3Clicado()"class="avaliado" src="img/botao-pontualidade.png" alt="pontualidade">
       <div id="pont-pontos"> 10 </div>
    </div>
 
-    <button id="avaliar" onclick="Moni.index.carregarView('avaliacao')"> Avaliar monitor</button>
+    <button id="avaliar" onclick="Moni.comoAvaliar.displayModal()"> Avaliar monitor </button>
+
+<!-- modal avaliação -->
+  <div id="myModal" class="modal">
+   
+    <div class="modal-content">
+      <div class="modal-header">
+       <i onclick="Moni.comoAvaliar.closeModal()" class="close material-icons"> close </i>
+     </div>
+     <div class="modal-body">
+      <div class="imagem-centro-img">
+           <img class="imagem-centro-avatar-big" src="img/avaliar-gif.gif" alt="avatar perfil monitor">
+           <h2> COMO AVALIAR </h2>
+           <h3> Você tem 12 pontos para distribuir entre as seguintes qualidades: </h3>
+           <div class="flexbox-row-around info-aval">
+            <img class="como-avaliar" src="img/botao-dominio.png" alt="dominio de conteudo">
+            <h3> Domina o conteúdo </h3>
+          </div>
+          <div class="flexbox-row-around info-aval">
+            <img class="como-avaliar" src="img/botao-empatia.png" alt="dominio de conteudo">
+            <h3> É gentil e solidário</h3>
+          </div>
+           <div class="flexbox-row-around info-aval">
+            <img class="como-avaliar" src="img/botao-pontualidade.png" alt="dominio de conteudo">
+            <h3> Pontual e organizado</h3>
+          </div>
+
+    <button onclick="Moni.avaliar.telaAvaliacao()" id="okavaliar"> OK, ENTENDI! </button>
+   </div>
+     </div>
+    </div>
+
+  </div>
+   <div id="snackbar-avaliacao"> Obrigado por avaliar! </div>
