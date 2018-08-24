@@ -318,6 +318,10 @@ li:last-child {
   font-size:18px;
 }
 
+.hidden-label{
+  display: none;
+}
+
 @media only screen and (max-height:420px) {
   #criar{
     display: none;
@@ -367,6 +371,17 @@ li:last-child {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+.nova-conta-ou-reg .escondido{
+  width:100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: none;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;

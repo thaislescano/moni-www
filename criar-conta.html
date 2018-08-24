@@ -44,7 +44,10 @@
       <option value="7">7° semestre</option>
     </select>
       <label for="monitor"> Sou monitor </label>
-      <input class="input-check" type="checkbox" name="monitor" value="monitor">
+      <input class="input-check" onclick="Moni.criarConta.checkClicado(this)"  type="checkbox" name="monitor" value="monitor">
+
+      <label class="hidden-label" for="Disciplina"> Disciplina </label>
+      <input class="escondido" type="text" id="disciplina" name="disciplina">
       
   <div>
     <button onclick="Moni.criarConta.mostrarSnack()" id="cadastrar"> SALVAR </button>

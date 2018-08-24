@@ -62,7 +62,6 @@ Moni.avaliar = {
 			setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
 		}
 		
-
 		
 	},
 	botao2Clicado: function(){
