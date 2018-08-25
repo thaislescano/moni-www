@@ -6,7 +6,6 @@ var PAGINAS = PAGINAS || [
     "perfil",
     "registrar-monitoria",
     "ver-monitoria",
-    "como-avaliar",
     "avaliacao"
 ];
 PAGINAS.loadPages = function () {
