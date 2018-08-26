@@ -20,14 +20,20 @@ var SERVIDOR = SERVIDOR || {
 			var resposta = {};
 
 			if (x.tipo === "login") {
-				resposta.existe = true;
-				resposta.nome = "";
-				resposta.imagemId = 0;
-				resposta.email = "moni@moniifms.com";
-				resposta.curso = "informatica";
-				resposta.semestre = 2;
-				resposta.monitor = false;
-				resposta.monitor = false;
+				if(x.email === "thais@hotmail.com" && x.senha === "123"){
+					resposta.existe = true;
+					resposta.nome = "Thais";
+					resposta.imagemId = 0;
+					resposta.email = "thais@hotmail.com";
+					resposta.curso = "informatica";
+					resposta.semestre = 6;
+					resposta.monitor = false;
+					resposta.disciplina = false;
+				}
+				else{
+					resposta.existe = false;
+				}
+				
 				callback(resposta);
 			}
 			else if (x.tipo === "criarConta") {

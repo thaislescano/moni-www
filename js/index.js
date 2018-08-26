@@ -23,14 +23,25 @@ Moni.index = {
 		var modal = document.getElementById("modalLoad");
 		modal.style.display = "block";
 		function validarEmail(email){
-			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+			var usuario = email.substring(0, email.indexOf("@"));
+			var dominio = email.substring(email.indexOf("@")+ 1, email.length);
+ 
+			if ((usuario.length >=1) &&
+			    (dominio.length >=3) && 
+			    (usuario.search("@")==-1) && 
+			    (dominio.search("@")==-1) &&
+			    (usuario.search(" ")==-1) && 
+			    (dominio.search(" ")==-1) &&
+			    (dominio.search(".")!=-1) &&      
+			    (dominio.indexOf(".") >=1)&& 
+			    (dominio.lastIndexOf(".") < dominio.length - 1)) {
    				 return true;
 			}
-   		 	return false;
+			return false;
 		}
 		var _email = document.getElementById("emailLogin").value;
 		var _senha = document.getElementById("senhaLogin").value;
-		if (!validarEmail(_email) && !_senha){
+		if (!validarEmail(_email) || !_senha){
 			modal.style.display = "none";
 			Moni.Geral.mostrarSnack("Email ou senha inválidos");
 			return;
@@ -47,12 +58,13 @@ Moni.index = {
 			modal.style.display = "none";
 			if (resposta.existe) {
 				Moni.User = resposta;
+				PAGINAS.carregarView('pesquisar');
 			}
 			else{
 				Moni.Geral.mostrarSnack("Email ou senha errados");
 			}
 
-			PAGINAS.carregarView('pesquisar');
+			
 		},
 		function(){
 			modal.style.display = "none";
