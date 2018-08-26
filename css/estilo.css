@@ -440,6 +440,7 @@ li:last-child {
     width:35%;
     vertical-align: middle;
     border-radius:50%;
+    z-index: 444;
     /*filter:grayscale(100%);*/
 }
 .imagem-centro-avatar-big{
@@ -453,7 +454,9 @@ li:last-child {
   border-radius: 10px;
   background-color: #e0e0e0;
   width:80%;
-  margin:auto;
+  margin-top:-20%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .avaliado{
@@ -494,8 +497,8 @@ li:last-child {
   border-radius:50%;
   z-index:2;
   position: relative;
-  margin-left:45%;
-  margin-top:-8%;
+  margin-left:43%;
+  margin-top:-30%;
   border: 1px solid white;
   line-height: 50px;
 }

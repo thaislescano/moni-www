@@ -12,9 +12,6 @@ Moni.avaliar = {
 		while (divInfos.firstChild) {
   			  divInfos.removeChild(divInfos.firstChild);
 		}
-		var guia = document.createElement("h3");
-		guia.innerHTML = "CLIQUE NAS IMAGENS ABAIXO PARA AVALIAR.";
-		divInfos.appendChild(guia);
 		/*transformar imagem em botão */
 		var imgs = document.getElementsByClassName("avaliado");
 		for(var i = 0; i < imgs.length; i++){
@@ -43,6 +40,7 @@ Moni.avaliar = {
 		bola.classList.add("ball");
 		bola.innerHTML = 12;
 		div.appendChild(bola);
+		
 
 	},
 	botaoClicado: function(el){
