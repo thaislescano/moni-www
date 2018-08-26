@@ -22,12 +22,12 @@
    </div>
 
    <div class="flexbox-row pontos">
-      <img onclick="Moni.avaliar.botao1Clicado()" class="avaliado" src="img/botao-dominio.png" alt="dominio de conteudo">
-      <div id="domi-pontos"> 2</div>
-      <img onclick="Moni.avaliar.botao2Clicado()"class="avaliado" src="img/botao-empatia.png" alt="empatia">
-      <div id="emp-pontos"> 12 </div>
-      <img onclick="Moni.avaliar.botao3Clicado()"class="avaliado" src="img/botao-pontualidade.png" alt="pontualidade">
-      <div id="pont-pontos"> 10 </div>
+      <img onclick="Moni.avaliar.botaoClicado(this)" id="domi_pontos" class="avaliado" src="img/botao-dominio.png" alt="dominio de conteudo">
+      <div id="domi_pontos_circle" class="pontos-circle"> 2</div>
+      <img onclick="Moni.avaliar.botaoClicado(this)" id="emp_pontos" class="avaliado" src="img/botao-empatia.png" alt="empatia">
+      <div id="emp_pontos_circle" class="pontos-circle"> 12 </div>
+      <img onclick="Moni.avaliar.botaoClicado(this)" id="pont_pontos" class="avaliado" src="img/botao-pontualidade.png" alt="pontualidade">
+      <div id="pont_pontos_circle" class="pontos-circle"> 10 </div>
    </div>
 
     <button id="avaliar" onclick="Moni.comoAvaliar.displayModal()"> Avaliar monitor </button>
@@ -63,4 +63,3 @@
     </div>
 
   </div>
-   <div id="snackbar-avaliacao"> Obrigado por avaliar! </div>

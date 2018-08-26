@@ -2,6 +2,7 @@
 <html>
 <head>
     <title> Moni </title>
+    <meta charset="UTF-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
@@ -16,22 +17,28 @@
              <img class="imagem-centro tamanhoLogo" src="img/monilog2.gif" alt="logo do moni">
         </div>
         <div class="moni-form">
-          <input  placeholder="EMAIL" type="email" required="">
-          <input  placeholder="SENHA" type="password" required="">
-         <button id="entrar"  onclick="Moni.index.carregarView('pesquisar')">Entrar</button>
-         <button id="criar" onclick="Moni.index.carregarView('criar-conta')">Criar conta</button>
+            <input id="emailLogin" placeholder="EMAIL" type="email" required="">
+            <input id="senhaLogin" placeholder="SENHA" type="password" required="">
+           <button id="entrar"  onclick="Moni.index.fazerLogin()">Entrar</button>
+           <button id="criar" onclick="Moni.index.carregarView('criar-conta')">Criar conta</button>
+         </div>
+
     </div>
-      
+    <div class="modal" id="modalLoad">
+        <img class="load-gif" src="img/loading.gif" alt="loading gif">
     </div>
+    <div id="snackbar"></div>
 </body>
 <script type="text/javascript" src="js/SERVIDOR.js"></script>
 
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/pesquisar.js"></script>
-<script type="text/javascript" src="js/criar-conta.js"></script>
+<script type="text/javascript" src="js/Moni.CriarConta.js"></script>
+<script type="text/javascript" src="js/Moni.Geral.js"></script>
 <script type="text/javascript" src="js/avaliar.js"></script>
 <script type="text/javascript" src="js/perfil.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript" src="js/Moni.Registro.js"></script>
 <script type="text/javascript" src="js/PAGINAS.js"></script>
 
 </html>
+

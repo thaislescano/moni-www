@@ -2,10 +2,10 @@
              <img class="imagem-centro tamanhoLogo" src="img/monilog2.gif" alt="logo do moni">
         </div>
         <div class="moni-form">
-          <input  placeholder="USERNAME" type="text" required="">
-          <input  placeholder="SENHA" type="password" required="">
-         <button id="entrar"  onclick="Moni.index.carregarView('pesquisar')">Entrar</button>
-         <button id="criar" onclick="Moni.index.carregarView('criar-conta')" >Criar conta</button>
+          <input id="emailLogin" placeholder="USERNAME" type="text" required="">
+          <input id="senhaLogin" placeholder="SENHA" type="password" required="">
+         <button id="entrar"  onclick="Moni.index.fazerLogin();">Entrar</button>
+         <button id="criar" onclick="Moni.index.carregarView('criar-conta');" >Criar conta</button>
     </div>
       
     </div>

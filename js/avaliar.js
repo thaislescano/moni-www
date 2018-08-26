@@ -20,6 +20,8 @@ Moni.avaliar = {
 		for(var i = 0; i < imgs.length; i++){
 			imgs[i].classList.add("clicavel");
 		}
+
+
  		/*subir div botoes */
 		var divPontos = document.getElementsByClassName("pontos")[0];
 		divPontos.style.marginTop="20%";
@@ -27,13 +29,13 @@ Moni.avaliar = {
 		var avaliar = document.getElementById("avaliar");
 		avaliar.style.display = "none";
 		/*zerar pontos*/
-		var box_domi = document.getElementById("domi-pontos");
+		var box_domi = document.getElementById("domi_pontos_circle");
 		box_domi.innerHTML = "";
 
-		var box_emp = document.getElementById("emp-pontos");
+		var box_emp = document.getElementById("emp_pontos_circle");
 		box_emp.innerHTML = "";
 
-		var box_pont = document.getElementById("pont-pontos");
+		var box_pont = document.getElementById("pont_pontos_circle");
 		box_pont.innerHTML = "";
 		/*mostrar bolinha de pontos*/
 		var bola = document.createElement("div");
@@ -43,69 +45,20 @@ Moni.avaliar = {
 		div.appendChild(bola);
 
 	},
-	botao1Clicado: function(){
+	botaoClicado: function(el){
+		if(!document.getElementsByClassName("ball")[0]) return;
 
-		// botao1.classList.add("apertado");
-		// setTimeout(function(){ botao1.classList.remove("apertado"); }, 3000);
-
-		var botao1 = document.getElementById("btn1-aval");
-		var domi_pontos_circle = document.getElementById("domi-pontos");
-
+		var pontos_circle = document.getElementById(el.id+"_circle");
 		var pontosCirculo = document.getElementsByClassName("ball")[0].innerHTML;
 		var pontosVaria = document.getElementsByClassName("ball")[0];
 
 		if (pontosCirculo > 0){;
 			pontosVaria.innerHTML = pontosCirculo - 1;
-			Moni.avaliar.domi_pontos += 1;
-			domi_pontos_circle.innerHTML = Moni.avaliar.domi_pontos;
+			Moni.avaliar[el.id] += 1;
+			pontos_circle.innerHTML = Moni.avaliar[el.id];
 		} else {
-			var snack = document.getElementById("snackbar-avaliacao");
-
-			snack.className = "show";
-			setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
+			Moni.Geral.mostrarSnack("Obrigado por avaliar!");
 		}
-		
-		
 	},
-	botao2Clicado: function(){
-		var botao2 = document.getElementById("btn2-aval");
-		var emp_pontos_circle = document.getElementById("emp-pontos");
-
-		var pontosCirculo = document.getElementsByClassName("ball")[0].innerHTML;
-		var pontosVaria = document.getElementsByClassName("ball")[0];
-
-		if (pontosCirculo > 0){;
-			pontosVaria.innerHTML = pontosCirculo - 1;
-			Moni.avaliar.emp_pontos += 1;
-			emp_pontos_circle.innerHTML = Moni.avaliar.emp_pontos;
-		} else {
-		var snack = document.getElementById("snackbar-avaliacao");
-
-		snack.className = "show";
-		setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
-		}
-
-
-	},
-
-	botao3Clicado:function(){
-		var botao3 = document.getElementById("btn3-aval");
-		var pont_pontos_circle = document.getElementById("pont-pontos");
-
-		var pontosCirculo = document.getElementsByClassName("ball")[0].innerHTML;
-		var pontosVaria = document.getElementsByClassName("ball")[0];
-
-		if (pontosCirculo > 0){;
-			pontosVaria.innerHTML = pontosCirculo - 1;
-			Moni.avaliar.pont_pontos += 1;
-			pont_pontos_circle.innerHTML = Moni.avaliar.pont_pontos;
-		} else {
-		var snack = document.getElementById("snackbar-avaliacao");
-
-		snack.className = "show";
-		setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
-		}
-
-	}
 
 }

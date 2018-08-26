@@ -1,14 +1,9 @@
 var Moni = Moni || {};
-Moni.criarConta = {
-	mostrarSnack: function (){
-		var snack = document.getElementById("snackbar");
-
-		snack.className = "show";
-		setTimeout(function(){ snack.className = snack.className.replace("show", ""); }, 3000);
-
+Moni.CriarConta = {
+	salvarUsuarioNovo: function(){
+		Moni.Geral.mostrarSnack("Sua conta foi criada!");
 		var select1 = document.getElementsByTagName('select')[0];
 		var select2 = document.getElementsByTagName('select')[1];
-
 
 		document.getElementsByClassName("input-box")[0].value = '';
 		document.getElementsByClassName("input-box")[1].value = '';
@@ -18,7 +13,6 @@ Moni.criarConta = {
 		select2.selectedIndex = 0;
 
 		document.getElementsByClassName("input-check")[0].checked = false;
-
 	},
 	checkClicado: function(checkbox){
 		

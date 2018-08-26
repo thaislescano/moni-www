@@ -6,7 +6,7 @@ var PAGINAS = PAGINAS || [
     "perfil",
     "registrar-monitoria",
     "ver-monitoria",
-    "avaliacao"
+    "perfil-editar"
 ];
 PAGINAS.loadPages = function () {
 	//carregar todas as paginas de html no PAGINAS msm
@@ -25,4 +25,9 @@ PAGINAS.loadPages = function () {
 		xhr.send();
 	}
 };
+PAGINAS.carregarView = function(pagina){
+	if(PAGINAS[pagina] !== undefined){
+		document.getElementById("corpo").innerHTML = PAGINAS[pagina];
+	}
+}
 PAGINAS.loadPages();
