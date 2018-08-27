@@ -56,7 +56,43 @@ Moni.avaliar = {
 			Moni.avaliar[el.id] += 1;
 			pontos_circle.innerHTML = Moni.avaliar[el.id];
 		} else {
-			Moni.Geral.mostrarSnack("Obrigado por avaliar!");
+			/*salvar dados avaliação */
+			var _pontosDominio = document.getElementById("domi_pontos_circle");
+			var _pontosEmpatia = document.getElementById("emp_pontos_circle");
+			var _pontosPontualidade = document.getElementById("pont_pontos_circle");
+
+			var modal = document.getElementById("modalLoad");
+			modal.style.display = "block";
+
+		var avaliarMonitor = { //falta id do monitor sendo avaliado
+			tipo: "avaliarMonitor",
+			pontosDominio: _pontosDominio,
+			pontosEmpatia: _pontosEmpatia,
+			pontosPontualidade: _pontosPontualidade
+			
+		};
+		
+		SERVIDOR.chamadaGet(
+		avaliarMonitor,
+		function(resposta){
+			if (resposta.ok) {
+				modal.style.display = "none";
+				Moni.Geral.mostrarSnack("Obrigado por avaliar!");
+				Moni.index.carregarView('pesquisar');
+			}
+			else{
+				modal.style.display = "none";
+				alert("-");
+			}
+
+			
+		},
+		function(){
+			modal.style.display = "none";
+			alert("Houve um erro inesperado");
+		});
+
+			
 		}
 	},
 

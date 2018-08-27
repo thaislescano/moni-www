@@ -2,6 +2,9 @@ var Moni = Moni || {};
 Moni.CriarConta = {
 	salvarUsuarioNovo: function(){
 
+			var modal = document.getElementById("modalLoad");
+			modal.style.display = "block";
+
 			function validarEmail(email){
 			var usuario = email.substring(0, email.indexOf("@"));
 			var dominio = email.substring(email.indexOf("@")+ 1, email.length);
@@ -24,14 +27,15 @@ Moni.CriarConta = {
 		var _curso = document.getElementById("curso").value;
 		var _semestre = document.getElementById("semestre").value;
 		var _monitor = document.getElementById("monitor").checked;
-
+		var _disciplina;
 		if (_monitor == true ){
-			var _disciplina = document.getElementById("disciplina").value;
+			 _disciplina = document.getElementById("disciplina").value;
 		} else {
-			var _disciplina = "";
+			 _disciplina = "";
 		}
 
 		if (!validarEmail(_email)){
+			modal.style.display = "none";
 			Moni.Geral.mostrarSnack("Email inválido");
 			return;
 		}
@@ -49,18 +53,20 @@ Moni.CriarConta = {
 		SERVIDOR.chamadaGet(
 		criarConta,
 		function(resposta){
-			if (resposta.existe) {
-				//Moni.User = resposta;
+			if (resposta.ok) {
+				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Sua conta foi criada!");
-				PAGINAS.carregarView('pesquisar');
+				Moni.index.carregarView('pesquisar');
 			}
 			else{
+				modal.style.display = "none";
 				alert("-");
 			}
 
 			
 		},
 		function(){
+			modal.style.display = "none";
 			alert("Houve um erro inesperado");
 		});
 		/*apagar campos*/ 

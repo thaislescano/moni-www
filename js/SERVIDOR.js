@@ -34,20 +34,23 @@ var SERVIDOR = SERVIDOR || {
 				//	resposta.existe = false;
 			//	}
 				
-				callback(resposta);
+				
 			}
 			else if (x.tipo === "criarConta") {
 				resposta.ok = true;
+
 				
+
 			}
 			else if (x.tipo === "pesquisar") {
 				
+				
 			}
 			else if (x.tipo === "avaliarMonitor") {
-				
+				resposta.ok = true;
 			}
 			else if (x.tipo === "registrarMonitoria") {
-				
+				resposta.ok = true;
 			}
 			else if (x.tipo === "verMonitoria") {
 				
@@ -57,6 +60,7 @@ var SERVIDOR = SERVIDOR || {
 			}
 			else if (x.tipo === "editarPerfil") {
 			}
+			callback(resposta);
 		}
 		setTimeout(teste,1000);
 	}
