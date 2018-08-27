@@ -38,13 +38,9 @@ var SERVIDOR = SERVIDOR || {
 			}
 			else if (x.tipo === "criarConta") {
 				resposta.ok = true;
-
-				
-
 			}
 			else if (x.tipo === "pesquisar") {
-				
-				
+								
 			}
 			else if (x.tipo === "avaliarMonitor") {
 				resposta.ok = true;
@@ -59,6 +55,7 @@ var SERVIDOR = SERVIDOR || {
 				
 			}
 			else if (x.tipo === "editarPerfil") {
+				resposta.ok = true;
 			}
 			callback(resposta);
 		}

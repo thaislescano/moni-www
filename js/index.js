@@ -63,7 +63,6 @@ Moni.index = {
 			else{
 				Moni.Geral.mostrarSnack("Email ou senha errados");
 			}
-
 			
 		},
 		function(){

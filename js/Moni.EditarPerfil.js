@@ -20,8 +20,82 @@ Moni.EditarPerfil = {
 
 	salvarEdicoes: function(){
 
-		Moni.Geral.mostrarSnack("Perfil atualizado!");
+		var modal = document.getElementById("modalLoad");
+		modal.style.display = "block";
+		/*validar email */
+		function validarEmail(email){
+			var usuario = email.substring(0, email.indexOf("@"));
+			var dominio = email.substring(email.indexOf("@")+ 1, email.length);
+ 
+			if ((usuario.length >=1) &&
+			    (dominio.length >=3) && 
+			    (usuario.search("@")==-1) && 
+			    (dominio.search("@")==-1) &&
+			    (usuario.search(" ")==-1) && 
+			    (dominio.search(" ")==-1) &&
+			    (dominio.search(".")!=-1) &&      
+			    (dominio.indexOf(".") >=1)&& 
+			    (dominio.lastIndexOf(".") < dominio.length - 1)) {
+   				 return true;
+			}
+			return false;
+		}
 
+		/*pegar values*/
+		var _imagemId = document.getElementById("novo").id;
+		var _nomeCompleto = document.getElementsByClassName('input-box')[0].value;
+		var _email = document.getElementsByClassName('input-box')[1].value;
+		var _curso = document.getElementsByTagName('select')[0].value
+		var _semestre = document.getElementsByTagName('select')[1].value;
+		var _monitor = document.getElementsByClassName("input-check")[0].checked;
+		var _disciplina;
+		if (_monitor == true ){
+			 _disciplina = document.getElementById("disciplina").value;
+		} else {
+			 _disciplina = "";
+		}
+
+		if (!validarEmail(_email)){
+			modal.style.display = "none";
+			Moni.Geral.mostrarSnack("Email inválido");
+			return;
+		}
+
+		var editarPerfil = {
+			tipo: "editarPerfil",
+			nomeCompleto: _nomeCompleto,
+			email: _email,
+			curso: _curso,
+			semestre: _semestre,
+			monitor: _monitor,
+			disciplina: _disciplina
+		};
+
+		SERVIDOR.chamadaGet(
+		editarPerfil,
+		function(resposta){
+			if (resposta.ok) {
+				modal.style.display = "none";
+				Moni.Geral.mostrarSnack("Perfil atualizado!");
+				Moni.index.carregarView('pesquisar');
+			}
+			else{
+				modal.style.display = "none";
+				alert("-");
+			}
+
+			
+		},
+		function(){
+			modal.style.display = "none";
+			alert("Houve um erro inesperado");
+		});
+
+		
+
+		
+
+		/*limpar campos*/
 		var select1 = document.getElementsByTagName('select')[0];
 		var select2 = document.getElementsByTagName('select')[1];
 		
