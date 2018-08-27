@@ -1,6 +1,6 @@
 var Moni = Moni || {};
 
-Moni.comoAvaliar = {
+Moni.Perfil = {
 	displayModal: function(){
 		var modal = document.getElementById('myModal');
 		modal.style.display = "block";
@@ -10,5 +10,11 @@ Moni.comoAvaliar = {
 	closeModal: function(){
 		var modal = document.getElementById('myModal');
 		modal.style.display = "none";
-	}
+	},
+
+	infoPerfil: function(quem){
+		var monitor = quem.id;
+		alert(monitor);
+		Moni.index.carregarView("perfil");
+	},
 }

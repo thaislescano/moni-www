@@ -19,6 +19,7 @@ Moni.pesquisa = {
 	pesquisar, 
 		function(resposta){ 
 			if (resposta.ok == true){
+				Moni.Monitores = resposta.monitores;
 				modal.style.display = "none";
 				for(var i = 0; i < resposta.monitores.length; i++){
 					Moni.pesquisa.mostrarCards(resposta.monitores[i]);
@@ -60,7 +61,7 @@ Moni.pesquisa = {
 	infoCard.appendChild(divInfo);
 
 	Moni.pesquisa.cardNumber ++;
-	card.onclick = function() {Moni.index.carregarView('perfil');};
+	card.onclick = function() {Moni.Perfil.infoPerfil(this);};
 	}
 	
 

@@ -48,8 +48,10 @@ var SERVIDOR = SERVIDOR || {
 			}
 			else if (x.tipo === "pesquisar") {
 				resposta.ok = true;
-				resposta.monitores = [{imagemId:0,nomeCompleto:"Thaís Lescano", email: "thais@hotmail.com", curso:"Informática",
+				resposta.monitores = [{imagemId:0,nomeCompleto:"João da Silva", email: "joao@hotmail.com", curso:"Informática",
 				semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda e quinta", horario: "16 às 17:30", pontosDominhio:0,
+				pontosEmpatia: 0, pontosPontualidade: 0 },{imagemId:1,nomeCompleto:"Maria da Silva", email: "joao@hotmail.com", curso:"Informática",
+				semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda", horario: "16 às 17:30", pontosDominhio:0,
 				pontosEmpatia: 0, pontosPontualidade: 0 }];
 								
 			}
