@@ -37,6 +37,7 @@ var SERVIDOR = SERVIDOR || {
 				callback(resposta);
 			}
 			else if (x.tipo === "criarConta") {
+				resposta.ok = true;
 				
 			}
 			else if (x.tipo === "pesquisar") {

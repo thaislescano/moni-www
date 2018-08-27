@@ -41,11 +41,11 @@ Moni.index = {
 		}
 		var _email = document.getElementById("emailLogin").value;
 		var _senha = document.getElementById("senhaLogin").value;
-		// if (!validarEmail(_email) || !_senha){
-		// 	modal.style.display = "none";
-		// 	Moni.Geral.mostrarSnack("Email ou senha inválidos");
-		// 	return;
-		// }
+		if (!validarEmail(_email) || !_senha){
+			modal.style.display = "none";
+			Moni.Geral.mostrarSnack("Email ou senha inválidos");
+			return;
+		}
 		var LOGIN = {
 			tipo: "login",
 			email: _email,
