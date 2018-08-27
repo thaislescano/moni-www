@@ -2,16 +2,24 @@ var Moni = Moni || {};
 Moni.EditarPerfil = {
 	checkClicado: function(checkbox){
 		
-		var label = document.getElementsByClassName("hidden-label")[0];
-		var inputCheck = document.getElementsByClassName("escondido")[0];
+		var label = document.getElementsByClassName("hidden-label");
+		var inputCheck = document.getElementsByClassName("escondido");
+
 		if(checkbox.checked == true){
-        	inputCheck.style.display = "block";
-        	label.style.display = "block";
-    	} else{
-    		inputCheck.style.display = "none";
-    		label.style.display = "none";
+			for (var i=0; i<inputCheck.length; i++){
+				inputCheck[i].style.display = "block";
+	        	label[i].style.display = "block";
+			}
+	        	
+    	} else {
+    		for (var i=0; i<inputCheck.length; i++){
+				inputCheck[i].style.display = "none";
+	        	label[i].style.display = "none";
+			}
     	}
 
+
+	
 	},
 	mostrarModalAvatar: function(){
 		var modal = document.getElementsByClassName("modal")[0];
@@ -51,9 +59,15 @@ Moni.EditarPerfil = {
 		var _disciplina;
 		if (_monitor == true ){
 			 _disciplina = document.getElementById("disciplina").value;
+			 _diaSemana = document.getElementById("diaSemana").value;
+			 _horario = document.getElementById("horario").value;
+
 		} else {
 			 _disciplina = "";
+			 _diaSemana ="";
+			 _horario = "";
 		}
+
 
 		if (!validarEmail(_email)){
 			modal.style.display = "none";
@@ -68,7 +82,9 @@ Moni.EditarPerfil = {
 			curso: _curso,
 			semestre: _semestre,
 			monitor: _monitor,
-			disciplina: _disciplina
+			disciplina: _disciplina,
+			diaSemana: _diaSemana,
+			horario: _horario
 		};
 
 		SERVIDOR.chamadaGet(
