@@ -22,24 +22,35 @@ var SERVIDOR = SERVIDOR || {
 			if (x.tipo === "login") {
 				// if(x.email === "thais@hotmail.com" && x.senha === "123"){
 					resposta.existe = true;
-					resposta.nome = "Thais";
-					resposta.imagemId = 0;
-					resposta.email = "thais@hotmail.com";
-					resposta.curso = "informatica";
-					resposta.semestre = 6;
-					resposta.monitor = false;
-					resposta.disciplina = false;
+					resposta.User = {
+						imagemId: 0,
+						nomeCompleto: "Thaís Lescano",
+						email: "thais@hotmail.com",
+						curso: "Informática",
+						semestre: "6",
+						monitor: true,
+						disciplina: "ingles",
+						diaSemana: "segunda e quinta",
+						horario: "16 às 17:30",
+						pontosDominio: 0,
+						pontosEmpatia: 0,
+						pontosPontualidade: 0
+					}
 			//}
 				//else{
 				//	resposta.existe = false;
 			//	}
-				
+			
 				
 			}
 			else if (x.tipo === "criarConta") {
 				resposta.ok = true;
 			}
 			else if (x.tipo === "pesquisar") {
+				resposta.ok = true;
+				resposta.monitores = [{imagemId:0,nomeCompleto:"Thaís Lescano", email: "thais@hotmail.com", curso:"Informática",
+				semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda e quinta", horario: "16 às 17:30", pontosDominhio:0,
+				pontosEmpatia: 0, pontosPontualidade: 0 }];
 								
 			}
 			else if (x.tipo === "avaliarMonitor") {
@@ -49,7 +60,7 @@ var SERVIDOR = SERVIDOR || {
 				resposta.ok = true;
 			}
 			else if (x.tipo === "verMonitoria") {
-				
+
 			}
 			else if (x.tipo === "enviarEmail") {
 				

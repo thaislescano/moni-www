@@ -91,13 +91,14 @@ Moni.EditarPerfil = {
 		editarPerfil,
 		function(resposta){
 			if (resposta.ok) {
+				Moni.User =  resposta.User;
 				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Perfil atualizado!");
 				Moni.index.carregarView('pesquisar');
 			}
 			else{
 				modal.style.display = "none";
-				alert("-");
+				alert("");
 			}
 
 			
@@ -106,12 +107,8 @@ Moni.EditarPerfil = {
 			modal.style.display = "none";
 			alert("Houve um erro inesperado");
 		});
-
 		
-
-		
-
-		/*limpar campos*/
+    	/*limpar campos*/
 		var select1 = document.getElementsByTagName('select')[0];
 		var select2 = document.getElementsByTagName('select')[1];
 		

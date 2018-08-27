@@ -57,7 +57,7 @@ Moni.index = {
 		function(resposta){
 			modal.style.display = "none";
 			if (resposta.existe) {
-				Moni.User = resposta;
+				Moni.User = resposta.User;
 				PAGINAS.carregarView('pesquisar');
 			}
 			else{
