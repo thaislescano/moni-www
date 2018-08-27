@@ -20,7 +20,7 @@ var SERVIDOR = SERVIDOR || {
 			var resposta = {};
 
 			if (x.tipo === "login") {
-				if(x.email === "thais@hotmail.com" && x.senha === "123"){
+				// if(x.email === "thais@hotmail.com" && x.senha === "123"){
 					resposta.existe = true;
 					resposta.nome = "Thais";
 					resposta.imagemId = 0;
@@ -29,10 +29,10 @@ var SERVIDOR = SERVIDOR || {
 					resposta.semestre = 6;
 					resposta.monitor = false;
 					resposta.disciplina = false;
-				}
-				else{
-					resposta.existe = false;
-				}
+			//}
+				//else{
+				//	resposta.existe = false;
+			//	}
 				
 				callback(resposta);
 			}

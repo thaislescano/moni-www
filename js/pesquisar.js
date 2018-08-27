@@ -14,6 +14,7 @@ Moni.pesquisa = {
 	var card = document.createElement("div");
 	card.classList.add("info-card");
 	card.classList.add("flexbox-row-around");
+	card.classList.add("margin-pesquisa-card");
 	corpo.appendChild(card);
 
 	//foto

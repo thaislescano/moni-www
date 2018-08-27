@@ -21,7 +21,8 @@ Moni.avaliar = {
 
  		/*subir div botoes */
 		var divPontos = document.getElementsByClassName("pontos")[0];
-		divPontos.style.marginTop="20%";
+		divPontos.classList.remove("pontos");
+		divPontos.classList.add("pontos-avaliar");
 		/*esconder botão avaliar monitor*/
 		var avaliar = document.getElementById("avaliar");
 		avaliar.style.display = "none";

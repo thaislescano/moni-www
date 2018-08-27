@@ -269,8 +269,7 @@ li:last-child {
 }
 
 /*cards dos resultados */
-.info-card {
-  margin-top: 5%;
+.info-card{
   width:80%; 
   height: 150px;
   margin-left: auto;
@@ -281,6 +280,23 @@ li:last-child {
   animation-name: fadeIn;
   animation-duration: 2s;
   -webkit-animation-duration: 2s;
+}
+
+.margin-pesquisa-card{
+  margin-top:8%;
+}
+
+.margin-registro-card{
+  margin-top:20%;
+}
+/*quando não é a primeira a aparecer, não precisa de tanta margem */
+.margin-registro-card-2{
+  margin-top:5%;
+}
+
+.margin-registro-txt{
+  padding-top:3%;
+  margin-left:5%;
 }
 /* animação para aparecer os cards */
     @-webkit-keyframes fadeIn {
@@ -303,6 +319,54 @@ li:last-child {
   margin-top:5%;
   margin-right:5%;
 }
+/*fab button - enviar email */
+.fab-button{
+   width: 70px;
+   height: 70px;
+   background-color: #454744;
+   border-radius: 50%;
+   box-shadow: 0 6px 10px 0 #666;
+   transition: all 0.1s ease-in-out;
+ 
+   font-size: 50px;
+   color: white;
+   text-align: center;
+   line-height: 60px;
+ 
+   position: fixed;
+   right: 5%;
+   bottom: 5%;
+}
+
+#editarAvatar{
+  width: 200px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size:16px;
+  line-height: 15px;
+  margin-left:20%;
+  margin-top:-16px;
+  margin-bottom:15px;
+  background-color: #ea4551;
+}
+
+.avatarChoice{
+  width:52%;
+}
+
+.fundo-avatares{
+  background-color:#E4E4E4;
+  margin:5%;
+}
+
+.centro{
+  margin-top:5%;
+  margin-left:10%;
+  margin-right:10%;
+}
+
+h2{ text-align:center; }
+
 
 /*botão criar conta */
 #criar, #avaliar{
@@ -443,20 +507,27 @@ li:last-child {
     z-index: 444;
     /*filter:grayscale(100%);*/
 }
+.imagem-centro-avatar-perfil {
+    margin-top:-12%;
+    width:100%;
+    vertical-align: middle;
+    z-index: 444;
+    /*filter:grayscale(100%);*/
+}
 .imagem-centro-avatar-big{
   margin-top:-18%;
   width:60%;
   vertical-align:middle;
 }
 
-.perfil-infos{
-  text-align:center;
-  border-radius: 10px;
-  background-color: #e0e0e0;
-  width:80%;
-  margin-top:-20%;
-  margin-left: auto;
-  margin-right: auto;
+.perfil-infos {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    width: 80%;
+    margin-top: -40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .avaliado{
@@ -466,6 +537,10 @@ li:last-child {
 .pontos{
   margin-top: 4%;
   margin-right:2%;
+}
+.pontos-avaliar{
+  margin-top:45%;
+  margin-right: 2%;
 }
 .pontos-dar{
   margin-top: 15%;
@@ -489,18 +564,18 @@ li:last-child {
 
 /* --- avaliação ---*/
 .ball{
-  background-color:#454744;
-  width:50px;
-  height:50px;
-  color: white;
-  font-size:24px;
-  border-radius:50%;
-  z-index:2;
-  position: relative;
-  margin-left:43%;
-  margin-top:-30%;
-  border: 1px solid white;
-  line-height: 50px;
+    background-color: #454744;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 2;
+    position: relative;
+    margin-left: 45%;
+    margin-top: -40%;
+    border: 1px solid white;
+    line-height: 40px;
 }
 
 .clicavel:active{
@@ -550,12 +625,41 @@ li:last-child {
     animation-duration: 0.4s;
     text-transform: uppercase;
 }
+.modal-content-email {
+    position: relative;
+    background-color: #fefefe;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    text-align: center;
+}
+
 .modal-body {padding: 2px 16px;}
+.modal-body-email {
+    padding: 50px 40px;
+}
 .close {
     color: grey;
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.close-avatar{
+  color: black;
+    float: right;
+    margin-top:1%;
+    font-size: 28px;
+    font-weight: bold;
+
 }
 .como-avaliar{
   width:25%;
@@ -572,7 +676,7 @@ li:last-child {
   margin-left: 8%;
 }
 
-#okavaliar{
+#okavaliar, #enviarEmail{
    -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     border: none;
@@ -588,6 +692,23 @@ li:last-child {
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
     margin-top: 4%;
     margin-bottom: 3%;
+}
+
+#escolherAvatar{
+     transition: all 0.3s ease-in-out;
+    border: none;
+    background: #454744;
+    cursor: pointer;
+    padding:10px;
+    border-radius: 3px;
+    width:50px;
+    color:white;
+     text-align: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 4%;
+    margin-bottom: 2%;
+    margin-left:45%;
+
 }
 
 /* Animations fade  in fade out */
