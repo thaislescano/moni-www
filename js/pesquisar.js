@@ -40,13 +40,12 @@ Moni.pesquisa = {
 	//card
 	 var corpo = document.getElementById("corpo");
 	 var card = document.createElement("div");
-	 card.classList.add("info-card");
+     card.classList.add("info-card");
 	 card.classList.add("flexbox-row-around");
 	 card.classList.add("margin-pesquisa-card");
 	 corpo.appendChild(card);
 
 	//foto
-	
 	var infoCard = document.getElementsByClassName("info-card")[Moni.pesquisa.cardNumber];
 	var imagem = document.createElement("img");
 	imagem.src="img/avatar" + monitor.imagemId + ".png";
@@ -61,7 +60,7 @@ Moni.pesquisa = {
 	infoCard.appendChild(divInfo);
 
 	Moni.pesquisa.cardNumber ++;
-	card.onclick = function() {Moni.Perfil.infoPerfil(this);};
+	//card.onclick = function() {Moni.Perfil.infoPerfil()); };
 	}
 	
 

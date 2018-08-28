@@ -20,7 +20,6 @@ var SERVIDOR = SERVIDOR || {
 			var resposta = {};
 
 			if (x.tipo === "login") {
-				// if(x.email === "thais@hotmail.com" && x.senha === "123"){
 					resposta.existe = true;
 					resposta.User = {
 						imagemId: 0,
@@ -36,10 +35,11 @@ var SERVIDOR = SERVIDOR || {
 						pontosEmpatia: 0,
 						pontosPontualidade: 0
 					}
-			//}
-				//else{
-				//	resposta.existe = false;
-			//	}
+				
+				
+				// else {
+				// 	resposta.existe = false;
+				// }
 			
 				
 			}

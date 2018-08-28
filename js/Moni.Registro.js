@@ -30,7 +30,6 @@ Moni.Registro = {
 				modal.style.display = "none";
 				alert("-");
 			}
-
 			
 		},
 		function(){

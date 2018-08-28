@@ -12,9 +12,10 @@ Moni.Perfil = {
 		modal.style.display = "none";
 	},
 
-	infoPerfil: function(quem){
+	infoPerfil: function(monitor){
 		var monitor = quem.id;
 		alert(monitor);
+
 		Moni.index.carregarView("perfil");
 	},
 }
