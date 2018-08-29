@@ -65,6 +65,7 @@ var SERVIDOR = SERVIDOR || {
 
 			}
 			else if (x.tipo === "enviarEmail") {
+				resposta.ok = true;
 				
 			}
 			else if (x.tipo === "editarPerfil") {
