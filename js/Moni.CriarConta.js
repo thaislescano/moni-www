@@ -23,6 +23,7 @@ Moni.CriarConta = {
 			return false;
 		}
 		var _email = document.getElementById("email").value;
+		var _senha = document.getElementById("senha").value;
 		var _nomeCompleto = document.getElementById("nomeCompleto").value;
 		var _curso = document.getElementById("curso").value;
 		var _semestre = document.getElementById("semestre").value;
@@ -49,19 +50,23 @@ Moni.CriarConta = {
 
 		var criarConta = {
 			tipo: "criarConta",
-			nomeCompleto: _nomeCompleto,
-			email: _email,
-			curso: _curso,
-			semestre: _semestre,
-			monitor: _monitor,
-			disciplina: _disciplina,
-			diaSemana: _diaSemana,
-			horario: _horario
+			user:{
+				nomeCompleto: _nomeCompleto,
+				senha: _senha,
+				email: _email,
+				curso: _curso,
+				semestre: _semestre,
+				monitor: _monitor,
+				disciplina: _disciplina,
+				diaSemana: _diaSemana,
+				horario: _horario
+			}	
 		};
 
 		SERVIDOR.chamadaGet(
 		criarConta,
 		function(resposta){
+			console.log(resposta.ok);
 			if (resposta.ok) {
 				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Sua conta foi criada!");

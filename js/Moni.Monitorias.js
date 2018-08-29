@@ -36,8 +36,9 @@ Moni.Monitorias = {
 		}
 		
 		var enviarEmail = { 
-		tipo: "enviarEmail",
-		emailprof: _emailProf,
+			tipo: "enviarEmail",
+			emailprof: _emailProf,
+			id: 0 //mandar o id do aluno que ta enviando o email
 		}
 
 		SERVIDOR.chamadaGet(

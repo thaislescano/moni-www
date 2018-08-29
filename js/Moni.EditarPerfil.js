@@ -77,14 +77,16 @@ Moni.EditarPerfil = {
 
 		var editarPerfil = {
 			tipo: "editarPerfil",
-			nomeCompleto: _nomeCompleto,
-			email: _email,
-			curso: _curso,
-			semestre: _semestre,
-			monitor: _monitor,
-			disciplina: _disciplina,
-			diaSemana: _diaSemana,
-			horario: _horario
+			user: {
+				nomeCompleto: _nomeCompleto,
+				email: _email,
+				curso: _curso,
+				semestre: _semestre,
+				monitor: _monitor,
+				disciplina: _disciplina,
+				diaSemana: _diaSemana,
+				horario: _horario
+			}
 		};
 
 		SERVIDOR.chamadaGet(

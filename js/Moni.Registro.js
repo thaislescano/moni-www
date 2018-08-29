@@ -13,9 +13,11 @@ Moni.Registro = {
 	
 		var registrarMonitoria = { //falta id do monitor sendo avaliado
 			tipo: "registrarMonitoria",
-			data: _data,
-			nomeAluno: _nomeAluno,
-			conteudo: _conteudo		
+			monitoria: {
+				data: _data,
+				nomeAluno: _nomeAluno,
+				conteudo: _conteudo
+			}
 		};
 		
 		SERVIDOR.chamadaGet(

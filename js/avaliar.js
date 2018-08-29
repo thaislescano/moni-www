@@ -41,6 +41,14 @@ Moni.avaliar = {
 		bola.classList.add("ball");
 		bola.innerHTML = 12;
 		div.appendChild(bola);
+
+		var paragrafo = document.createElement("p");
+		paragrafo.innerHTML = "Clique nos botões abaixo para avaliar domínio de conteúdo, empatia e pontualidade";
+		div.appendChild(paragrafo);
+
+		var paragrafo2 = document.createElement("p");
+		paragrafo2.innerHTML = "Lembre-se que você tem 12 pontos para distribuir entre os 3 quesitos!";
+		div.appendChild(paragrafo2);
 		
 
 	},
@@ -64,12 +72,14 @@ Moni.avaliar = {
 			var modal = document.getElementById("modalLoad");
 			modal.style.display = "block";
 
-		var avaliarMonitor = { //falta id do monitor sendo avaliado
+var id;	var avaliarMonitor = { //falta id do monitor sendo avaliado
 			tipo: "avaliarMonitor",
-			pontosDominio: _pontosDominio,
-			pontosEmpatia: _pontosEmpatia,
-			pontosPontualidade: _pontosPontualidade
-			
+			user:{
+				id: _id, //adicionar a lógica disso aqui
+				pontosDominio: _pontosDominio,
+				pontosEmpatia: _pontosEmpatia,
+				pontosPontualidade: _pontosPontualidade
+			}
 		};
 		
 		SERVIDOR.chamadaGet(
@@ -82,7 +92,7 @@ Moni.avaliar = {
 			}
 			else{
 				modal.style.display = "none";
-				alert("-");
+				alert("Não foi possível avaliar esse monitor!");
 			}
 
 			

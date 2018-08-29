@@ -1,17 +1,16 @@
+
 var SERVIDOR = SERVIDOR || {
 	chamadaGet: function(parametros, callback, callbackErro){
 		let xhr = new XMLHttpRequest();
-		/*var de teste*/
-		var x = parametros;
+		var params = parametros;
 		var tempo = Date.now();
 		/**************/
-		parametros = "http://192.168.0.103:8010/" + JSON.stringify(parametros);
+		parametros = "http://10.47.11.96:8010/" + JSON.stringify(parametros);
 		xhr.onload = function() {
-			x = {};
-			callback(xhr.response);
+			callback(Moni.Geral.tryParseJSON(xhr.response));
 		};
 		xhr.onerror = function() {
-//			callbackErro();
+			callbackErro();
 		};
 		xhr.open("GET", parametros);
 		xhr.send();
@@ -77,19 +76,19 @@ var SERVIDOR = SERVIDOR || {
 	}
 }
 
-/***********************************************************************
-EXEMPLO
-************************************************************************
-var EXEMPLO = { //EXEMPLO DE PARAMETROS
-	tipo: "cardMonitor",
-	materia:"quimica"
-}
-SERVIDOR.chamadaGet(
-EXEMPLO, //mandar as variaveis
-function(resposta){ //funcao qnd der certo
-	alert(resposta);
-},
-function(){ //funcao qnd der errado
-	alert("xiiii deu erro");
-});
-************************************************************************/
+
+// /***********************************************************************
+// EXEMPLO
+// ************************************************************************
+// var EXEMPLO = { //EXEMPLO DE PARAMETROS
+// 	tipo: "cardMonitor",
+// 	materia:"quimica"
+// }
+// SERVIDOR.chamadaGet(
+// EXEMPLO, //mandar as variaveis
+// function(resposta){ //funcao qnd der certo
+// 	alert(resposta);
+// },
+// function(){ //funcao qnd der errado
+// 	alert("xiiii deu erro");
+// });

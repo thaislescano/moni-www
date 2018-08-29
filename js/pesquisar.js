@@ -10,9 +10,9 @@ Moni.pesquisa = {
 		var _semestreUser = Moni.User.semestre;
 		
 	var pesquisar = { 
-	tipo: "pesquisar",
-	disciplna: _inputDisciplina,
-	semestreUser: _semestreUser
+		tipo: "pesquisar",
+		disciplna: _inputDisciplina,
+		semestre: _semestreUser
 	}
 
 	SERVIDOR.chamadaGet(
@@ -60,7 +60,7 @@ Moni.pesquisa = {
 	infoCard.appendChild(divInfo);
 
 	Moni.pesquisa.cardNumber ++;
-	//card.onclick = function() {Moni.Perfil.infoPerfil()); };
+	card.onclick = function() {Moni.index.carregarView('perfil')};
 	}
 	
 

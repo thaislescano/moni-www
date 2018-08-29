@@ -48,8 +48,10 @@ Moni.index = {
 		}
 		var LOGIN = {
 			tipo: "login",
-			email: _email,
-			senha: _senha
+			user: {
+				email: _email,
+				senha: _senha
+			}
 		};
 
 		SERVIDOR.chamadaGet(
