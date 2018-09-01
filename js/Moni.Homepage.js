@@ -25,7 +25,7 @@ Moni.Homepage = {
 			modal.style.display = "none";
 			if (resposta.existe) {
 				Moni.User = resposta.user;
-				PAGINAS.carregarView('pesquisar');
+				Moni.Geral.carregarView('pesquisar');
 			}
 			else{
 				Moni.Geral.mostrarSnack("Email ou senha errados");

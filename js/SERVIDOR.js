@@ -3,8 +3,9 @@ var SERVIDOR = SERVIDOR || {
 		let xhr = new XMLHttpRequest();
 		var params = parametros;
 		var tempo = Date.now();
-
-		parametros = "http://localhost:8010/" + JSON.stringify(parametros);
+console.log("http://192.168.0.104:8010/" + encodeURIComponent(JSON.stringify(parametros)));
+		parametros = "http://192.168.0.104:8010/" + JSON.stringify(parametros);
+		
 		xhr.onload = function() {
 			callback(Moni.Geral.tryParseJSON(xhr.response));
 		};

@@ -4,11 +4,12 @@ Moni.CriarConta = {
 		var modal = document.getElementById("modalLoad");
 		modal.style.display = "block";
 
+		var _imagemId = 0;
 		var _email = document.getElementById("email").value;
 		var _senha = document.getElementById("senha").value;
 		var _nomeCompleto = document.getElementById("nomeCompleto").value;
 		var _curso = document.getElementById("curso").value;
-		var _semestre = document.getElementById("semestre").value;
+		var _semestre = parseInt(document.getElementById("semestre").value.substring(0,1));
 		var _monitor = document.getElementById("monitor").checked;
 		var _disciplina, _diaSemana, _horario;
 		if (_monitor == true ){
@@ -30,6 +31,7 @@ Moni.CriarConta = {
 		var criarConta = {
 			tipo: "criarConta",
 			user:{
+				imagemId: _imagemId,
 				nomeCompleto: _nomeCompleto,
 				senha: _senha,
 				email: _email,
@@ -49,7 +51,7 @@ Moni.CriarConta = {
 			if (resposta.ok) {
 				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Sua conta foi criada!");
-				Moni.Geral.carregarView('pesquisar');
+				Moni.Geral.carregarView('home');
 			}
 			else{
 				modal.style.display = "none";
