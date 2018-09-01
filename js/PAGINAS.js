@@ -20,14 +20,12 @@ PAGINAS.loadPages = function () {
             //ele n deixa de ser um vetor, mas fica com esses atributos extras (ele n contam pro PAGINAS.length)
 			PAGINAS[nomePagina] = xhr.responseText;
 			console.log(nomePagina + " carregado");
+			if(nomePagina === "home"){
+				Moni.Geral.carregarView('home');
+			}
 		}
 		xhr.open("GET", caminhoPagina);
 		xhr.send();
 	}
 };
-PAGINAS.carregarView = function(pagina){
-	if(PAGINAS[pagina] !== undefined){
-		document.getElementById("corpo").innerHTML = PAGINAS[pagina];
-	}
-}
 PAGINAS.loadPages();

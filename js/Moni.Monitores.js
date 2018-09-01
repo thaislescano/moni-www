@@ -1,4 +1,2 @@
 var Moni = Moni || {};
-Moni.Monitores = {
-	
-};
+Moni.Monitores = {};

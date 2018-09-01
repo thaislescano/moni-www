@@ -1,40 +1,39 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
-        <ul>
-             <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
-            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
-            <li onclick="Moni.index.carregarView('home')"> Sair </li> 
-        </ul>    
-    </div>
-    <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
-    <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
-    <i onclick="Moni.index.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
+	<i id="more" class="material-icons item" onclick="Moni.Geral.mostrarMenu()"> menu </i>
+	<div id="myMenu" onclick="Moni.Geral.mostrarMenu()">
+		<ul>
+			<li onclick="Moni.Geral.carregarView('registrar-monitoria');Moni.Geral.mostrarMenu();"> Registrar monitoria </li>
+			<li onclick="Moni.Geral.carregarView('ver-monitoria');Moni.Geral.mostrarMenu();"> Ver registros </li>
+			<li onclick="Moni.Geral.carregarView('home')"> Sair </li> 
+		</ul>
+	</div>
+	<img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+	<i onclick="Moni.Geral.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
+	<i onclick="Moni.Geral.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
 </div>
 
 <div class="info-card margin-registro-card">
-    <div class="registrado">
-        <h2 class="margin-registro-txt" id="data"> data </h2>
-        <h2 class="margin-registro-txt" id="aluno"> aluno </h2>
-        <h2 class="margin-registro-txt" id="conteudo"> conteúdo </h2>
-    </div>
+	<div class="registrado">
+		<h2 class="margin-registro-txt" id="data"> data </h2>
+		<h2 class="margin-registro-txt" id="aluno"> aluno </h2>
+		<h2 class="margin-registro-txt" id="conteudo"> conteúdo </h2>
+	</div>
 </div>
-<div class="fab-button" onclick="Moni.Monitorias.mostrarEmailModal()"> <i class="material-icons">
-mail_outline
-</i> </div>
+<div class="fab-button" onclick="Moni.Monitorias.mostrarEmailModal()">
+	<i class="material-icons"> mail_outline </i>
+</div>
 <div id="myModal" class="modal">
-    <div class="modal-content-email">
-            <div class="modal-header">
-                 <i onclick="Moni.Perfil.closeModal()" class="close material-icons"> close </i>
-            </div> 
-             <div class="modal-body-email">
-                <div class="imagem-centro-img">
-                <img class="imagem-centro-avatar-big" src="img/mail.png" alt="avatar perfil monitor">
-             </div>
-            <label for="emailProf">Email do professor supervisor</label>
-            <input class="input-box" type="email" id="emailProf" name="emailProf">
-            <button onclick="Moni.Monitorias.enviarEmail()" id="enviarEmail"> ENVIAR </button>
-          </div>  
-    </div>
-</div>          
-    
+	<div class="modal-content-email">
+		<div class="modal-header">
+			<i onclick="Moni.Perfil.closeModal()" class="close material-icons"> close </i>
+		</div> 
+		<div class="modal-body-email">
+			<div class="imagem-centro-img">
+				<img class="imagem-centro-avatar-big" src="img/mail.png" alt="avatar perfil monitor">
+			</div>
+			<label for="emailProf">Email do professor supervisor</label>
+			<input class="input-box" type="email" id="emailProf" name="emailProf">
+			<button onclick="Moni.Monitorias.enviarEmail()" id="enviarEmail"> ENVIAR </button>
+		</div>
+	</div>
+</div>

@@ -1,11 +1,10 @@
-
 var SERVIDOR = SERVIDOR || {
 	chamadaGet: function(parametros, callback, callbackErro){
 		let xhr = new XMLHttpRequest();
 		var params = parametros;
 		var tempo = Date.now();
-		/**************/
-		parametros = "http://10.47.11.96:8010/" + JSON.stringify(parametros);
+
+		parametros = "http://localhost:8010/" + JSON.stringify(parametros);
 		xhr.onload = function() {
 			callback(Moni.Geral.tryParseJSON(xhr.response));
 		};
@@ -19,40 +18,23 @@ var SERVIDOR = SERVIDOR || {
 			var resposta = {};
 
 			if (x.tipo === "login") {
-					resposta.existe = true;
-					resposta.User = {
-						imagemId: 0,
-						nomeCompleto: "Thaís Lescano",
-						email: "thais@hotmail.com",
-						curso: "Informática",
-						semestre: "6",
-						monitor: true,
-						disciplina: "ingles",
-						diaSemana: "segunda e quinta",
-						horario: "16 às 17:30",
-						pontosDominio: 0,
-						pontosEmpatia: 0,
-						pontosPontualidade: 0
-					}
-				
-				
-				// else {
-				// 	resposta.existe = false;
-				// }
-			
-				
+				resposta.existe = true;
+				resposta.user = {
+					imagemId: 0,			nomeCompleto: "Thaís Lescano",	email: "thais@hotmail.com",
+					curso: "Informática",	semestre: "6",					monitor: true,
+					disciplina: "ingles",	diaSemana: "segunda e quinta",	horario: "16 às 17:30",
+					pontosDominio: 0,		pontosEmpatia: 0,				pontosPontualidade: 0
+				}
 			}
 			else if (x.tipo === "criarConta") {
 				resposta.ok = true;
 			}
 			else if (x.tipo === "pesquisar") {
 				resposta.ok = true;
-				resposta.monitores = [{imagemId:0,nomeCompleto:"João da Silva", email: "joao@hotmail.com", curso:"Informática",
-				semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda e quinta", horario: "16 às 17:30", pontosDominhio:0,
-				pontosEmpatia: 0, pontosPontualidade: 0 },{imagemId:1,nomeCompleto:"Maria da Silva", email: "joao@hotmail.com", curso:"Informática",
-				semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda", horario: "16 às 17:30", pontosDominhio:0,
-				pontosEmpatia: 0, pontosPontualidade: 0 }];
-								
+				resposta.monitores = [
+					{imagemId:0,nomeCompleto:"João da Silva", email: "joao@hotmail.com", curso:"Informática", semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda e quinta", horario: "16 às 17:30", pontosDominhio:0, pontosEmpatia: 0, pontosPontualidade: 0 },
+					{imagemId:1,nomeCompleto:"Maria da Silva", email: "joao@hotmail.com", curso:"Informática", semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda", horario: "16 às 17:30", pontosDominhio:0, pontosEmpatia: 0, pontosPontualidade: 0 }
+				];
 			}
 			else if (x.tipo === "avaliarMonitor") {
 				resposta.ok = true;
@@ -61,22 +43,19 @@ var SERVIDOR = SERVIDOR || {
 				resposta.ok = true;
 			}
 			else if (x.tipo === "verMonitoria") {
-
+				resposta.ok = true;
 			}
 			else if (x.tipo === "enviarEmail") {
 				resposta.ok = true;
-				
 			}
 			else if (x.tipo === "editarPerfil") {
 				resposta.ok = true;
 			}
 			callback(resposta);
 		}
-		setTimeout(teste,1000);
+		//setTimeout(teste,1000);
 	}
 }
-
-
 // /***********************************************************************
 // EXEMPLO
 // ************************************************************************

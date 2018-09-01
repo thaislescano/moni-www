@@ -1,26 +1,21 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
-        <ul>
-            <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
-            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
-            <li onclick="Moni.index.carregarView('home')"> Sair </li> 
-        </ul>    
-    </div>
-    <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
-    <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
-    <i onclick="Moni.index.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
-</div>    
-
-<div class="imagem-centro-img">
-   
-        <img class="imagem-centro" src="img/lupazoom.gif" alt="gif lupa">
-   
+	<i id="more" class="material-icons item" onclick="Moni.Geral.mostrarMenu()"> menu </i>
+	<div id="myMenu" onclick="Moni.Geral.mostrarMenu()">
+		<ul>
+			<li onclick="Moni.Geral.carregarView('registrar-monitoria');Moni.Geral.mostrarMenu();"> Registrar monitoria </li>
+			<li onclick="Moni.Geral.carregarView('ver-monitoria');Moni.Geral.mostrarMenu();"> Ver registros </li>
+			<li onclick="Moni.Geral.carregarView('home')"> Sair </li> 
+		</ul>
+	</div>
+	<img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+	<i onclick="Moni.Geral.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
+	<i onclick="Moni.Geral.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
 </div>
-  <div class="search-container flexbox-row">
-            <input  id="pesquisa" type="text" placeholder="Pesquisar por disciplina" name="search">
-            <button onclick="Moni.pesquisa.pesquisar()" type="submit">  Buscar </button>
- </div> 
+<div class="imagem-centro-img">
+	<img class="imagem-centro" src="img/lupazoom.gif" alt="gif lupa">
+</div>
+<div class="search-container flexbox-row">
+	<input  id="pesquisa" type="text" placeholder="Pesquisar por disciplina" name="search">
+	<button onclick="Moni.Pesquisa.pesquisar()" type="submit">  Buscar </button>
+</div> 
 <div id="snackbar">Sua conta foi criada! </div>
-  
-

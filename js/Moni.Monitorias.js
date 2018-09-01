@@ -9,27 +9,9 @@ Moni.Monitorias = {
 		var modal = document.getElementById("modalLoad");
 			modal.style.display = "block";
 
-			function validarEmail(email){
-			var usuario = email.substring(0, email.indexOf("@"));
-			var dominio = email.substring(email.indexOf("@")+ 1, email.length);
- 
-			if ((usuario.length >=1) &&
-			    (dominio.length >=3) && 
-			    (usuario.search("@")==-1) && 
-			    (dominio.search("@")==-1) &&
-			    (usuario.search(" ")==-1) && 
-			    (dominio.search(" ")==-1) &&
-			    (dominio.search(".")!=-1) &&      
-			    (dominio.indexOf(".") >=1)&& 
-			    (dominio.lastIndexOf(".") < dominio.length - 1)) {
-   				 return true;
-			}
-			return false;
-		}
-
 		var _emailProf = document.getElementById("emailProf").value;
 		//
-		if (!validarEmail(_emailProf)){
+		if (!Moni.Geral.validarEmail(_emailProf)){
 			modal.style.display = "none";
 			Moni.Geral.mostrarSnack("Email ou senha inválidos");
 			return;

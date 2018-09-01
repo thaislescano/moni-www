@@ -26,7 +26,7 @@ Moni.Registro = {
 			if (resposta.ok) {
 				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Monitoria registrada!");
-				Moni.index.carregarView('pesquisar');
+				Moni.Geral.carregarView('pesquisar');
 			}
 			else{
 				modal.style.display = "none";

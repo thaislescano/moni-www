@@ -1,38 +1,33 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
-        <ul>
-            <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
-            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
-            <li onclick="Moni.index.carregarView('home')"> Sair </li> 
-        </ul>    
-    </div>
-    <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
-     <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
-    <i onclick="Moni.index.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
+	<i id="more" class="material-icons item" onclick="Moni.Geral.mostrarMenu()"> menu </i>
+	<div id="myMenu" onclick="Moni.Geral.mostrarMenu()">
+		<ul>
+			<li onclick="Moni.Geral.carregarView('registrar-monitoria');Moni.Geral.mostrarMenu();"> Registrar monitoria </li>
+			<li onclick="Moni.Geral.carregarView('ver-monitoria');Moni.Geral.mostrarMenu();"> Ver registros </li>
+			<li onclick="Moni.Geral.carregarView('home')"> Sair </li> 
+		</ul>
+	</div>
+	<img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+	<i onclick="Moni.Geral.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
+	<i onclick="Moni.Geral.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
 </div> 
 <div class="centralizar">
-<div class="imagem-centro-img">
-  
-    <img class="imagem-centro-avatar note" src="img/registrar-gif.gif" alt="imagem registro">
+	<div class="imagem-centro-img">
+		<img class="imagem-centro-avatar note" src="img/registrar-gif.gif" alt="imagem registro">
+	</div>
+	<div class="nova-conta-ou-reg">
+		<div>
+			<label for="data">Data</label>
+			<input class="input-box" type="date" id="data" name="data">
+
+			<label for="nomeAluno">Nome do Aluno</label>
+			<input class="input-box" type="text" id="nomeAluno" name="nomeAluno">
+
+			<label for="conteudo">Conteúdo trabalhado (Palavra-chave - Ex: 'Reino Monera')</label>
+			<input class="input-box" type="text" id="conteudo" name="conteudo">
+			<div>
+				<button onclick="Moni.Registro.btnRegistro()" id="cadastrar"> Registrar </button>
+			</div>
+		</div>
+	</div>
 </div>
-<div class="nova-conta-ou-reg">
-        <div> 
-             <label for="data">Data</label>
-             <input class="input-box" type="date" id="data" name="data">   
-
-               <label for="nomeAluno">Nome do Aluno</label>
-                <input class="input-box" type="text" id="nomeAluno" name="nomeAluno">
-
-                 <label for="conteudo">Conteúdo trabalhado (Palavra-chave - Ex: 'Reino Monera')</label>
-                <input class="input-box" type="text" id="conteudo" name="conteudo">
-             <div>
-            <button onclick="Moni.Registro.btnRegistro()" id="cadastrar"> Registrar </button>
-            </div>
-       </div>
-</div>
-</div>
-
-
-    
-

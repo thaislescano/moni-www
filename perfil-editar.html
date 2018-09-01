@@ -1,87 +1,82 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
-        <ul>
-             <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
-            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
-            <li onclick="Moni.index.carregarView('home')"> Sair </li> 
-        </ul>    
-    </div>
-    <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
-    <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
-    <i onclick="Moni.index.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
-</div>    
+	<i id="more" class="material-icons item" onclick="Moni.Geral.mostrarMenu()"> menu </i>
+	<div id="myMenu" onclick="Moni.Geral.mostrarMenu()">
+		<ul>
+			 <li onclick="Moni.Geral.carregarView('registrar-monitoria');Moni.Geral.mostrarMenu();"> Registrar monitoria </li>
+			<li onclick="Moni.Geral.carregarView('ver-monitoria');Moni.Geral.mostrarMenu();"> Ver registros </li>
+			<li onclick="Moni.Geral.carregarView('home')"> Sair </li>
+		</ul>
+	</div>
+	<img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+	<i onclick="Moni.Geral.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
+	<i onclick="Moni.Geral.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
+</div>
 <!-- nome completo, semestre, email, curso, username, senha -->
 <div class="nova-conta-ou-reg">
-  <h2> </h2>
-    <img id="novo" src="img/avatar0.png" alt="imagem nova conta">
-   
-<div>
-     <button id="editarAvatar" onclick="Moni.EditarPerfil.mostrarModalAvatar()"> Editar avatar </button>
-     <label for="cname">Nome Completo</label>
-    <input class="input-box" type="text" id="cname" name="firstname">
+	<h2> </h2>
+	<img id="novo" src="img/avatar0.png" alt="imagem nova conta">
+	<div>
+		<button id="editarAvatar" onclick="Moni.EditarPerfil.mostrarModalAvatar()"> Editar avatar </button>
+		<label for="cname">Nome Completo</label>
+		<input class="input-box" type="text" id="cname" name="firstname">
 
-     <label for="email"> Email </label>
-    <input class="input-box" type="email" id="email" name="email"> <!--placeholder="meunome@email.com"--> 
+		<label for="email"> Email </label>
+		<input class="input-box" type="email" id="email" name="email"> <!--placeholder="meunome@email.com"--> 
 
-     <label for="curso">Curso</label>
-    <select class="input-box" id="curso" name="curso">
-      <option value="eletrotecnica">Eletrotécnica</option>
-      <option value="informatica">Informática - integrado</option>
-      <option value="informatica">Informática - subsequente</option>
-      <option value="mecanica">Mecânica</option>
-      <option value="sistemas">Sistemas pra Internet</option>
-    </select>
+		<label for="curso">Curso</label>
+		<select class="input-box" id="curso" name="curso">
+			<option value="eletrotecnica">Eletrotécnica</option>
+			<option value="informatica">Informática - integrado</option>
+			<option value="informatica">Informática - subsequente</option>
+			<option value="mecanica">Mecânica</option>
+			<option value="sistemas">Sistemas pra Internet</option>
+		</select>
 
-     <label for="semestre">Semestre</label>
-    <select class="input-box" id="semestre" name="semestre">
-      <option value="1">1° semestre</option>
-      <option value="2">2° semestre</option>
-      <option value="3">3° semestre</option>
-      <option value="4">4° semestre</option>
-      <option value="5">5° semestre</option>
-      <option value="6">6° semestre</option>
-      <option value="7">7° semestre</option>
-    </select>
-      <label for="monitor"> Sou monitor </label>
-      <input class="input-check" onclick="Moni.EditarPerfil.checkClicado(this)"  type="checkbox" name="monitor" value="monitor">
+		<label for="semestre">Semestre</label>
+		<select class="input-box" id="semestre" name="semestre">
+			<option value="1">1° semestre</option>
+			<option value="2">2° semestre</option>
+			<option value="3">3° semestre</option>
+			<option value="4">4° semestre</option>
+			<option value="5">5° semestre</option>
+			<option value="6">6° semestre</option>
+			<option value="7">7° semestre</option>
+		</select>
+		<label for="monitor"> Sou monitor </label>
+		<input class="input-check" onclick="Moni.EditarPerfil.checkClicado(this)"  type="checkbox" name="monitor" value="monitor">
 
-      <label class="hidden-label" for="Disciplina"> Disciplina </label>
-      <input class="escondido" type="text" id="disciplina" name="disciplina">
+		<label class="hidden-label" for="Disciplina"> Disciplina </label>
+		<input class="escondido" type="text" id="disciplina" name="disciplina">
 
-       <label class="hidden-label" for="Dia"> Dias(s) da Semana </label>
-      <input class="escondido" type="text" id="diaSemana" name="diaSemana">
+		<label class="hidden-label" for="Dia"> Dias(s) da Semana </label>
+		<input class="escondido" type="text" id="diaSemana" name="diaSemana">
 
-      <label class="hidden-label" for="Horario"> Horário </label>
-      <input class="escondido" type="text" id="horario" name="horario">
-      
-  <div>
-    <button onclick="Moni.EditarPerfil.salvarEdicoes()" id="editar"> SALVAR </button>
-  </div>
-</div>
+		<label class="hidden-label" for="Horario"> Horário </label>
+		<input class="escondido" type="text" id="horario" name="horario">
+
+		<div>
+		<button onclick="Moni.EditarPerfil.salvarEdicoes()" id="editar"> SALVAR </button>
+		</div>
+	</div>
 </div>
 <!-- modal -->
-    <div class="modal" id="myModal">
-        
-            <div class="modal-header">
-                 
-             </div>
-            <div class="fundo-avatares"> 
-             <div class="modal-body">
-                <i onclick="Moni.EditarPerfil.closeModal()" class="close-avatar material-icons"> close </i>
-                <h2> CLIQUE EM UM AVATAR PARA SELECIONÁ-LO :) </h2>
-               <div class="flexbox-row-around centro">
-                    <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar1" class="avatarChoice" src="img/avatar1.png" alt="Opção do avatar 1">
-                     <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar2" class="avatarChoice" src="img/avatar2.png" alt="Opção do avatar 2">
-                      <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar3" class="avatarChoice" src="img/avatar3.png" alt="Opção do avatar 3">
-               </div>
-                <div class="flexbox-row-around centro">
-                    <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar4" class="avatarChoice" src="img/avatar4.png" alt="Opção do avatar 4">
-                     <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar5" class="avatarChoice" src="img/avatar5.png" alt="Opção do avatar 5">
-                      <img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar6" class="avatarChoice" src="img/avatar6.png" alt="Opção do avatar 6">
-               </div>
-                <button onclick="Moni.EditarPerfil.closeModal()" id="escolherAvatar"> OK </button>
-             </div>
-         </div>
-    
-    </div>
+<div class="modal" id="myModal">
+	<div class="modal-header"></div>
+	<div class="fundo-avatares"> 
+		<div class="modal-body">
+			<i onclick="Moni.EditarPerfil.closeModal()" class="close-avatar material-icons"> close </i>
+			<h2> CLIQUE EM UM AVATAR PARA SELECIONÁ-LO :) </h2>
+			<div class="flexbox-row-around centro">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar1" class="avatarChoice" src="img/avatar1.png" alt="Opção do avatar 1">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar2" class="avatarChoice" src="img/avatar2.png" alt="Opção do avatar 2">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar3" class="avatarChoice" src="img/avatar3.png" alt="Opção do avatar 3">
+			</div>
+			<div class="flexbox-row-around centro">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar4" class="avatarChoice" src="img/avatar4.png" alt="Opção do avatar 4">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar5" class="avatarChoice" src="img/avatar5.png" alt="Opção do avatar 5">
+				<img onclick="Moni.EditarPerfil.escolhaAvatar(this)" id="avatar6" class="avatarChoice" src="img/avatar6.png" alt="Opção do avatar 6">
+			</div>
+			<button onclick="Moni.EditarPerfil.closeModal()" id="escolherAvatar"> OK </button>
+		</div>
+	</div>
+</div>

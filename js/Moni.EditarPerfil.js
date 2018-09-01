@@ -1,53 +1,28 @@
 var Moni = Moni || {};
 Moni.EditarPerfil = {
 	checkClicado: function(checkbox){
-		
 		var label = document.getElementsByClassName("hidden-label");
 		var inputCheck = document.getElementsByClassName("escondido");
 
 		if(checkbox.checked == true){
 			for (var i=0; i<inputCheck.length; i++){
 				inputCheck[i].style.display = "block";
-	        	label[i].style.display = "block";
+				label[i].style.display = "block";
 			}
-	        	
-    	} else {
-    		for (var i=0; i<inputCheck.length; i++){
+		} else {
+			for (var i=0; i<inputCheck.length; i++){
 				inputCheck[i].style.display = "none";
-	        	label[i].style.display = "none";
+				label[i].style.display = "none";
 			}
-    	}
-
-
-	
+		}
 	},
 	mostrarModalAvatar: function(){
 		var modal = document.getElementsByClassName("modal")[0];
 		modal.style.display = "block";
 	},
-
 	salvarEdicoes: function(){
-
 		var modal = document.getElementById("modalLoad");
 		modal.style.display = "block";
-		/*validar email */
-		function validarEmail(email){
-			var usuario = email.substring(0, email.indexOf("@"));
-			var dominio = email.substring(email.indexOf("@")+ 1, email.length);
- 
-			if ((usuario.length >=1) &&
-			    (dominio.length >=3) && 
-			    (usuario.search("@")==-1) && 
-			    (dominio.search("@")==-1) &&
-			    (usuario.search(" ")==-1) && 
-			    (dominio.search(" ")==-1) &&
-			    (dominio.search(".")!=-1) &&      
-			    (dominio.indexOf(".") >=1)&& 
-			    (dominio.lastIndexOf(".") < dominio.length - 1)) {
-   				 return true;
-			}
-			return false;
-		}
 
 		/*pegar values*/
 		var _imagemId = document.getElementById("novo").id;
@@ -58,23 +33,19 @@ Moni.EditarPerfil = {
 		var _monitor = document.getElementsByClassName("input-check")[0].checked;
 		var _disciplina;
 		if (_monitor == true ){
-			 _disciplina = document.getElementById("disciplina").value;
-			 _diaSemana = document.getElementById("diaSemana").value;
-			 _horario = document.getElementById("horario").value;
-
+			_disciplina = document.getElementById("disciplina").value;
+			_diaSemana = document.getElementById("diaSemana").value;
+			_horario = document.getElementById("horario").value;
 		} else {
-			 _disciplina = "";
-			 _diaSemana ="";
-			 _horario = "";
+			_disciplina = "";
+			_diaSemana ="";
+			_horario = "";
 		}
-
-
-		if (!validarEmail(_email)){
+		if (!Moni.Geral.validarEmail(_email)){
 			modal.style.display = "none";
 			Moni.Geral.mostrarSnack("Email inválido");
 			return;
 		}
-
 		var editarPerfil = {
 			tipo: "editarPerfil",
 			user: {
@@ -93,17 +64,15 @@ Moni.EditarPerfil = {
 		editarPerfil,
 		function(resposta){
 			if (resposta.ok) {
-				Moni.User =  resposta.User;
+				Moni.User =  resposta.user;
 				modal.style.display = "none";
 				Moni.Geral.mostrarSnack("Perfil atualizado!");
-				Moni.index.carregarView('pesquisar');
+				Moni.Geral.carregarView('pesquisar');
 			}
 			else{
 				modal.style.display = "none";
 				alert("");
 			}
-
-			
 		},
 		function(){
 			modal.style.display = "none";
@@ -130,8 +99,7 @@ Moni.EditarPerfil = {
 	escolhaAvatar: function(imagem){
 		var imagens = document.getElementsByClassName("avatarChoice");
 		for(var i = 0; i < imagens.length; i++){
-				imagens[i].style.filter="";
-			
+			imagens[i].style.filter="";
 		}
 		imagem.style.filter = "grayscale(100%)";
 

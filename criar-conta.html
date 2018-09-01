@@ -1,65 +1,63 @@
 <div class="navbar flexbox-row">
-    <i id="more" class="material-icons item" onclick="Moni.index.mostrarMenu()"> menu </i>
-    <div id="myMenu" onclick="Moni.index.mostrarMenu()">
-        <ul>
-             <li onclick="Moni.index.carregarView('registrar-monitoria');Moni.index.mostrarMenu();"> Registrar monitoria </li>
-            <li onclick="Moni.index.carregarView('ver-monitoria');Moni.index.mostrarMenu();"> Ver registros </li>
-            <li onclick="Moni.index.carregarView('home')"> Sair </li> 
-        </ul>    
-    </div>
-    <img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
-    <i onclick="Moni.index.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
-    <i onclick="Moni.index.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
-</div>    
+	<i id="more" class="material-icons item" onclick="Moni.Geral.mostrarMenu()"> menu </i>
+	<div id="myMenu" onclick="Moni.Geral.mostrarMenu()">
+		<ul>
+			 <li onclick="Moni.Geral.carregarView('registrar-monitoria');Moni.Geral.mostrarMenu();"> Registrar monitoria </li>
+			<li onclick="Moni.Geral.carregarView('ver-monitoria');Moni.Geral.mostrarMenu();"> Ver registros </li>
+			<li onclick="Moni.Geral.carregarView('home')"> Sair </li> 
+		</ul>
+	</div>
+	<img class="item" id="logo-branca" src="img/moni-white.png" alt="logo moni branca">
+	<i onclick="Moni.Geral.carregarView('pesquisar')" id="pesq" class="material-icons item"> search </i>
+	<i onclick="Moni.Geral.carregarView('perfil-editar')" id="conta" class="material-icons item"> account_circle </i>
+</div>
 
 <!-- nome completo, semestre, email, curso, username, senha -->
 <div class="nova-conta-ou-reg">
-  <h2> </h2>
-    <img id="novo" src="img/novaconta.gif" alt="imagem nova conta">
-<div>
-     <label for="nomeCompleto">Nome Completo</label>
-    <input class="input-box" type="text" id="nomeCompleto" name="nomeCompleto">
+	<h2> </h2>
+	<img id="novo" src="img/novaconta.gif" alt="imagem nova conta">
+	<div>
+		<label for="nomeCompleto">Nome Completo</label>
+		<input class="input-box" type="text" id="nomeCompleto" name="nomeCompleto">
 
-     <label for="email"> Email </label>
-    <input class="input-box" type="email" id="email" name="email"> <!--placeholder="meunome@email.com"--> 
+		<label for="email"> Email </label>
+		<input class="input-box" type="email" id="email" name="email"> <!--placeholder="meunome@email.com"--> 
 
-       <label for="senha"> Senha </label>
-    <input class="input-box" type="password" id="senha" name="senha">
+		<label for="senha"> Senha </label>
+		<input class="input-box" type="password" id="senha" name="senha">
 
-     <label for="curso">Curso</label>
-    <select class="input-box" id="curso" name="curso">
-      <option value="eletrotecnica">Eletrotécnica</option>
-      <option value="informatica">Informática - integrado</option>
-      <option value="informatica">Informática - subsequente</option>
-      <option value="mecanica">Mecânica</option>
-      <option value="sistemas">Sistemas pra Internet</option>
-    </select>
+		<label for="curso">Curso</label>
+		<select class="input-box" id="curso" name="curso">
+			<option value="eletrotecnica">Eletrotécnica</option>
+			<option value="informatica">Informática - integrado</option>
+			<option value="informatica">Informática - subsequente</option>
+			<option value="mecanica">Mecânica</option>
+			<option value="sistemas">Sistemas pra Internet</option>
+		</select>
 
-     <label for="semestre">Semestre</label>
-    <select class="input-box" id="semestre" name="semestre">
-      <option value="1">1° semestre</option>
-      <option value="2">2° semestre</option>
-      <option value="3">3° semestre</option>
-      <option value="4">4° semestre</option>
-      <option value="5">5° semestre</option>
-      <option value="6">6° semestre</option>
-      <option value="7">7° semestre</option>
-    </select>
-      <label for="monitor"> Sou monitor </label>
-      <input class="input-check" onclick="Moni.CriarConta.checkClicado(this)"  type="checkbox" id="monitor" name="monitor" value="monitor">
+		<label for="semestre">Semestre</label>
+		<select class="input-box" id="semestre" name="semestre">
+			<option value="1">1° semestre</option>
+			<option value="2">2° semestre</option>
+			<option value="3">3° semestre</option>
+			<option value="4">4° semestre</option>
+			<option value="5">5° semestre</option>
+			<option value="6">6° semestre</option>
+			<option value="7">7° semestre</option>
+		</select>
+		<label for="monitor"> Sou monitor </label>
+		<input class="input-check" onclick="Moni.CriarConta.checkClicado(this)"  type="checkbox" id="monitor" name="monitor" value="monitor">
 
-      <label class="hidden-label" for="Disciplina"> Disciplina </label>
-      <input class="escondido" type="text" id="disciplina" name="disciplina">
+		<label class="hidden-label" for="Disciplina"> Disciplina </label>
+		<input class="escondido" type="text" id="disciplina" name="disciplina">
 
-       <label class="hidden-label" for="Dia"> Dias(s) da Semana </label>
-      <input class="escondido" type="text" id="diaSemana" name="diaSemana">
+		<label class="hidden-label" for="Dia"> Dias(s) da Semana </label>
+		<input class="escondido" type="text" id="diaSemana" name="diaSemana">
 
-      <label class="hidden-label" for="Horario"> Horário </label>
-      <input class="escondido" type="text" id="horario" name="horario">
-
-      
-  <div>
-    <button onclick="Moni.CriarConta.salvarUsuarioNovo()" id="cadastrar"> SALVAR </button>
-  </div>
-</div>
+		<label class="hidden-label" for="Horario"> Horário </label>
+		<input class="escondido" type="text" id="horario" name="horario">
+		<div>
+			<button onclick="Moni.CriarConta.salvarUsuarioNovo()" id="cadastrar"> SALVAR </button>
+		</div>
+	</div>
 </div>
