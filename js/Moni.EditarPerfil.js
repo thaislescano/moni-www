@@ -49,6 +49,9 @@ Moni.EditarPerfil = {
 		var editarPerfil = {
 			tipo: "editarPerfil",
 			user: {
+
+				id: Moni.User.id,
+				imagemId: _imagemId,
 				nomeCompleto: _nomeCompleto,
 				email: _email,
 				curso: _curso,

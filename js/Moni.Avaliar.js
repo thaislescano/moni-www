@@ -3,6 +3,7 @@ Moni.Avaliar = {
 	domi_pontos: 0,
 	emp_pontos: 0,
 	pont_pontos: 0,
+	monitor: undefined,
 	telaAvaliacao: function() {
 		/*esconder modal*/
 		var modal = document.getElementById("myModal");
@@ -64,11 +65,14 @@ Moni.Avaliar = {
 			Moni.Avaliar[el.id] += 1;
 			pontos_circle.innerHTML = Moni.Avaliar[el.id];
 		} else {
+			Moni.Avaliar.domi_pontos =  0;
+			Moni.Avaliar.emp_pontos =  0;
+			Moni.Avaliar.pont_pontos =  0;
 			/*salvar dados avaliação */
-			var _pontosDominio = document.getElementById("domi_pontos_circle");
-			var _pontosEmpatia = document.getElementById("emp_pontos_circle");
-			var _pontosPontualidade = document.getElementById("pont_pontos_circle");
-			var _id;
+			var _pontosDominio = parseInt(document.getElementById("domi_pontos_circle").innerHTML);
+			var _pontosEmpatia = parseInt(document.getElementById("emp_pontos_circle").innerHTML);
+			var _pontosPontualidade = parseInt(document.getElementById("pont_pontos_circle").innerHTML);
+			var _id = Moni.Avaliar.monitor;
 
 			var modal = document.getElementById("modalLoad");
 			modal.style.display = "block";
@@ -81,7 +85,7 @@ Moni.Avaliar = {
 					pontosEmpatia: _pontosEmpatia,
 					pontosPontualidade: _pontosPontualidade
 				}
-			};
+			};console.log(avaliarMonitor);
 
 			SERVIDOR.chamadaGet(
 			avaliarMonitor,
