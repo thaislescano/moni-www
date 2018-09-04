@@ -10,7 +10,19 @@ Moni.Monitorias = {
 			modal.style.display = "block";
 
 		var _emailProf = document.getElementById("emailProf").value;
-		//
+
+		//margin-registro-txt
+		var blocoRegistro = document.getElementsByClassName("registrado");
+		var _dataMonitoria = document.getElementsByClassName("data");
+		var _nomeAluno = document.getElementsByClassName("aluno");
+		var _conteudo = document.getElementsByClassName("conteudo");
+		var _corpo = "";
+
+			for(var i = 0; i < blocoRegistro.length; i++){
+				_corpo +=  "Registro " + i + " - Data: " + _dataMonitoria[i].innerHTML + " Aluno: " + _nomeAluno[i].innerHTML + " conteudo: " + 
+				_conteudo[i].innerHTML + " - ";
+			}
+
 		if (!Moni.Geral.validarEmail(_emailProf)){
 			modal.style.display = "none";
 			Moni.Geral.mostrarSnack("Email ou senha inválidos");
@@ -20,7 +32,8 @@ Moni.Monitorias = {
 		var enviarEmail = { 
 			tipo: "enviarEmail",
 			emailprof: _emailProf,
-			id: 0 //mandar o id do aluno que ta enviando o email
+			idMonitor: Moni.User.id, //mandar o id do aluno que ta enviando o email
+			corpo: _corpo
 		}
 
 		SERVIDOR.chamadaGet(
