@@ -19,8 +19,8 @@ Moni.Monitorias = {
 		var _corpo = "";
 
 			for(var i = 0; i < blocoRegistro.length; i++){
-				_corpo +=  "Registro " + i + " - Data: " + _dataMonitoria[i].innerHTML + " Aluno: " + _nomeAluno[i].innerHTML + " conteudo: " + 
-				_conteudo[i].innerHTML + " - ";
+				_corpo +=  "<ul><li> Registro " + i + "</li><li>  Data: " + _dataMonitoria[i].innerHTML + "</li><li> Aluno: " + _nomeAluno[i].innerHTML + "</li><li> conteudo: " + 
+				_conteudo[i].innerHTML + "</li></ul>";
 			}
 
 		if (!Moni.Geral.validarEmail(_emailProf)){

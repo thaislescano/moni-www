@@ -10,6 +10,8 @@ Moni.Registro = {
 		var _data = document.getElementById("data");
 		var _nomeAluno = document.getElementById("nomeAluno");
 		var _conteudo = document.getElementById("conteudo");
+
+		alert(_data + " " + _nomeAluno + " " + _conteudo);
 	
 		var registrarMonitoria = { //falta id do monitor sendo avaliado
 			tipo: "registrarMonitoria",
