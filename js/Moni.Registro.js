@@ -7,9 +7,9 @@ Moni.Registro = {
 		var modal = document.getElementById("modalLoad");
 		modal.style.display = "block";
 
-		var _data = document.getElementById("data");
-		var _nomeAluno = document.getElementById("nomeAluno");
-		var _conteudo = document.getElementById("conteudo");
+		var _data = document.getElementById("data").value;
+		var _nomeAluno = document.getElementById("nomeAluno").value;
+		var _conteudo = document.getElementById("conteudo").value;
 
 		alert(_data + " " + _nomeAluno + " " + _conteudo);
 	
