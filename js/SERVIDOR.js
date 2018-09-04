@@ -3,8 +3,8 @@ var SERVIDOR = SERVIDOR || {
 		let xhr = new XMLHttpRequest();
 		var params = parametros;
 		var tempo = Date.now();
-console.log("http://192.168.0.104:8010/" + encodeURIComponent(JSON.stringify(parametros)));
-		parametros = "http://192.168.0.104:8010/" + JSON.stringify(parametros);
+		console.log("http://localhost:8010/" + encodeURIComponent(JSON.stringify(parametros)));
+		parametros = "http://localhost:8010/" + JSON.stringify(parametros);
 		
 		xhr.onload = function() {
 			callback(Moni.Geral.tryParseJSON(xhr.response));
@@ -34,7 +34,7 @@ console.log("http://192.168.0.104:8010/" + encodeURIComponent(JSON.stringify(par
 				resposta.ok = true;
 				resposta.monitores = [
 					{imagemId:0,nomeCompleto:"João da Silva", email: "joao@hotmail.com", curso:"Informática", semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda e quinta", horario: "16 às 17:30", pontosDominhio:0, pontosEmpatia: 0, pontosPontualidade: 0 },
-					{imagemId:1,nomeCompleto:"Maria da Silva", email: "joao@hotmail.com", curso:"Informática", semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda", horario: "16 às 17:30", pontosDominhio:0, pontosEmpatia: 0, pontosPontualidade: 0 }
+					{imagemId:1,nomeCompleto:"Maria da Silva", email: "maria@hotmail.com", curso:"Informática", semestre: "6", monitor: true, disciplina:"ingles", diaSemana:"segunda", horario: "16 às 17:30", pontosDominhio:0, pontosEmpatia: 0, pontosPontualidade: 0 }
 				];
 			}
 			else if (x.tipo === "avaliarMonitor") {

@@ -14,6 +14,7 @@ Moni.Registro = {
 		var registrarMonitoria = { //falta id do monitor sendo avaliado
 			tipo: "registrarMonitoria",
 			monitoria: {
+				idMonitor: Moni.User.id, 
 				data: _data,
 				nomeAluno: _nomeAluno,
 				conteudo: _conteudo

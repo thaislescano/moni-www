@@ -11,7 +11,7 @@ Moni.Pesquisa = {
 		
 		var pesquisar = {
 			tipo: "pesquisar",
-			disciplna: _inputDisciplina,
+			disciplina: _inputDisciplina,
 			semestre: _semestreUser
 		};
 

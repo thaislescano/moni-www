@@ -50,7 +50,7 @@ Moni.CriarConta = {
 			console.log(resposta.ok);
 			if (resposta.ok) {
 				modal.style.display = "none";
-				Moni.Geral.mostrarSnack("Sua conta foi criada!");
+				Moni.Geral.mostrarSnack("Confirme sua conta por email");
 				Moni.Geral.carregarView('home');
 			}
 			else{
